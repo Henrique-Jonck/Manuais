@@ -1,0 +1,1196 @@
+<!--| Autor.............: Henrique Campos Jonck - 17 Anos |-->
+<!--| Data de Inicio....: 13/09/2021                      |-->
+<!--| Guia de Linguagem.: HTML                            |-->
+
+
+<!--? SUMÁRIO GERAL -->
+<CAPITULO_1 - INTRODUÇÃO A LINGUAGEM>
+
+<1> INTRODUÇÃO
+<2> FERRAMENTAS UTILIZADAS
+<3> NOMENCLATURAS NA INTERNET
+<4> DIREITOS DE USO
+
+----------------------------------
+<CAPITULO_2 - CONTEUDO BASICO>
+
+<5> ELEMENTOS/TAGS
+<6> ESTRUTURA DO HTML
+<7> ADICIONANDO A CSS
+<8> ADICIONANDO O JAVASCRIPT
+
+----------------------------------
+<CAPITULO_3 - +++++++++++++ >
+
+<8>  FORMATOS DE IMAGEM
+<9>  MEDIA TYPES
+<10> MEDIA QUERIES
+
+----------------------------------
+<!-- VISITE O SUB-SUMARIO PARA MELHOR PESQUISA! -->
+<CAPITULO_4 - MANUAL DE TAGS>
+
+<8> TEXTO
+    <8.1> TITULOS [H1-H6]
+    <8.2> PARAGRAFOS [P]
+    <8.3> FORMATAÇÕES DE TEXTO
+
+<9> IMAGENS
+    <9.1> IMAGEM [IMG]
+    <9.2> PICTURE [PICTURE]
+    <9.3> FORMATOS DE IMAGEM
+    <9.4> CARREGAR IMAGEM
+
+<10> AUDIOS [AUDIO]
+<11> VIDEOS [VIDEO]
+<12> LEGENDAS [TRACK]
+<13> MIDIAS [SOURCE]
+<14> ANCORAS [A]
+
+<15> LISTAS
+    <15.1> LISTA ORDENADA [OL]
+    <15.2> LISTA DESORDENADA [UL]
+    <15.3> ITENS DE LISTAS [LI]
+    <15.4> LISTAS DE DEFINIÇÃO [DL]
+    <15.5> DEFINIÇÃO DE TERMO [DT]
+    <15.6> DEFINIÇÃO DE DESCRIÇÃO [DD]     
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I>
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--|*********************************************************************************************************************************|--|            CAPITULO 1            |-->
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+
+<!--? SUB-SUMÁRIO -->
+<CAPITULO_1 - INTRODUÇÃO A LINGUAGEM>
+
+<1> INTRODUÇÃO
+<2> FERRAMENTAS UTILIZADAS
+<3> NOMENCLATURAS NA INTERNET
+<4> DIREITOS DE USO
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+<!--! INTRODUÇÃO -->   
+<!--: HTML é utilizado para criar a estruturação de um site. Utiliamos em conjunto do CSS e JAVASCRIPT. -->
+<!--: Com o HTML podemos criar Titulos, Paragrafos, Imagens, Videos, Botões e etc... -->
+
+    HTML <!-- HYPERTEXT MARKUP LANGUAGE - Linguagem de Marcação em Hipertexto. -->
+
+<!--* NAVEGADORES WEB -->
+<!--: A função dos navegadores é ler um documento HTML e exibi-los corretamente. -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+<!--! FERRAMENTAS UTILIZADAS --> 
+<!--: Quando criamos um site utilizamos primordialmente de 3 Ferramentas, sendo que cada uma é responsavel por alguma função. -->
+
+<!--* HTML -->
+<!-- HYPERTEXT MARKUP LANGUAGE - Linguagem de Marcação em Hipertexto. -->
+    + Focada na ESTRUTURA do site em si, utilizamos para criar os componentes.
+    + Não confunda com uma linguagem de programação.
+
+<!--* CSS -->
+<!-- CASCADING STYLE SHEETS - Folhas de Estilo em Cascata. -->
+    + Focada no DESING do site, toda a parte visual.
+    + Não confunda com uma linguagem de programação.
+
+<!--* JAVASCRIPT -->
+<!-- Linguagem de Programação baseada em C. -->
+    + Focada na INTERATIVIDADE do site, todas as interações.
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+<!--! NOMENCLATURAS NA INTERNET -->   
+<!--: Todas os termos utilizados na internet. -->
+
+<!--* PROTOCOLOS DE COMUNICAÇÃO -->
+    TCP    <!-- Padroniza os dados comunicados na internet, verifica se os dados estao sendo enviados corretamente e sem erros. -->
+    IP     <!-- Endereco que identifica um dispositivo ou servidor, consiste em uma série de regras que regem o formato dos dados. -->
+    TCP/IP <!-- Conjunto de regras padronizadas que permite que os computadores se comuniquem na internet. -->
+
+<!--* DOMINIO E HOSPEDAGEM -->
+    DOMINIO <!-- Nome que damos a um site que criamos para podermos identifica-lo -->
+        + Deve ser um nome UNICO.
+        + Pago anualmente.
+        + Qual TLP ele terá.
+
+    SUBDOMINIO <!-- Ramificações do dominio que servem para conduzir o usuário diretamente para uma secção especificada. -->
+    CAMINHO    <!-- Funciona de forma semelhante ao SUB-DOMÍNIO, conduzindo o usuario diretamente a uma secção do site. -->
+
+    HOSPEDAGEM <!-- Local no servidor onde seu site esta armazenado. -->
+        + Escolhemos tamanho de armazenamento, memoria, recursor e etc...
+        + Pago mensalmente
+
+    DNS <!-- Serviço que busca o domínio pesquisado e retorna seu respectivo IP. -->
+    URL <!-- Refere-se ao endereço de rede de um site.                           -->
+
+    TLP   <!--| Top Level domain [.com]                     |-->
+    GTLP  <!--| Generic Top Level domain [.io /.edu /.gov]  |-->
+    CCTLP <!--| Country Code Top Level domain [.br]         |-->
+
+<!--* ESTRUTURA DE UMA URL -->
+    <!-- URL: https://www.github.com/gustavoguanabara -->
+    PROTOCOLO   <!--| https             |-->
+    SUB-DOMÍNIO <!--| www               |-->
+    DOMÍNIO     <!--| Github.com        |-->
+    TLP         <!--| .com              |-->
+    CAMINHO     <!--| /gustavoguanabara |-->
+ 
+    
+    <!-- URL: gustavoganabara.github.io --> 
+    SUB-DOMÍNIO <!--| gustavoganabara |-->
+    DOMÍNIO     <!--| Github.com      |-->
+    GTLP        <!--| .io             |-->
+
+
+<I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 1 >
+<!--! DIREITOS DE USO -->   
+<!--: A maioria dos arquivos na Internet são protegidos por direitos autorais. Saiba como identifica-los. -->
+
+    Licenças Creative Commons (CC) <!-- Direito liberado para utilização gratuita. -->
+    Licenças Comerciais e Outras   <!-- Protegidas por direitos autorais, devem ser compradas. -->
+
+<!-- DICA: Abaixo do buscador do google utilize (Ferramentas -> Direitos de uso) para filtrar os itens pesquisados. -->
+
+<!--* SITES CC -->
+<!--: Estes sites possuem uma biblioteca de imagens, videos ou audios gratuitos e libarados para utilização. -->
+
+    Unsplass - https://unsplash.com/
+    Pexels   - https://www.pexels.com/pt-br/
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I>
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--|*********************************************************************************************************************************|--|            CAPITULO 1            |-->
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+
+<!--? SUB-SUMARIO -->
+<CAPITULO_2 - CONTEUDO BASICO>
+
+<5> ELEMENTOS/TAGS
+<6> ESTRUTURA DO HTML
+<7> ADICIONANDO A CSS
+<8> ADICIONANDO O JAVASCRIPT
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+<!--! ELEMENTOS/TAGS --> 
+<!--: Os Elementos/Tags são a base de toda a estrutura do HTML. Com elas definimos cada tipo de conteudo de nosso site. -->
+<!--: Um elemento é definido por uma Tag de Abertura, algum conteúdo e uma Tag de Fechamento. -->
+
+<!--* CRIANDO UMA TAG ----------------------------------------------------------------------------------------------------------------->
+
+<!--TODO: SINTAXE -->
+    <NOME_TAG> CONTEÚDO... </NOME_TAG>
+
+<!--TODO: EXEMPLO -->
+    <H1> Titulo </H1>
+
+<!--* PARAMETROS ---------------------------------------------------------------------------------------------------------------------->
+<!--: Dentro da estrutura de uma TAG podem existir Parametros que são meios de se informar algo para aquela determinada TAG. -->
+<!--: Os Parametros são definidos dentro das TAGS. -->
+
+<!--TODO: SINTAXE -->
+    <NOME_TAG PARAMETRO> 
+
+<!--TODO: EXEMPLO -->
+    <P title="Titulo"> Paragrafo </P>
+
+<!--* ABERTURA E FECHAMENTO ----------------------------------------------------------------------------------------------------------->
+<!--: Todas as TAGS devem ser Abertas, porem nem todas precisão ser Fechadas. -->
+
+    <H1> </H1> <!-- TAG com Abertura e Fechamento. -->
+    <br>       <!-- TAG apenas com Abertura. -->
+
+
+<!--: Neste Manual cada TAG citada terá um guia sobre o fechamento de TAG, chamado de "FECHAMENTO". -->
+--<FECHAMENTO: OBRIGATORIO>
+
+    OBRIGATORIO <!-- TAG com Fechamento Obrigatório. -->
+    OPCIONAL    <!-- TAG com Fechamento Opcional.    -->
+    INEXISTENTE <!-- TAG com Fechamento Inexistente. -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+<!--! ESTRUTURA DO HTML --> 
+<!--: Um documento HTML é estruturado em HIERARQUIAS, sendo dividido entre PARENTS e CHILDS (Pais e Filhos). -->
+
+<!--* HIERARQUIA BASICA --------------------------------------------------------------------------------------------------------------->
+<!--: Esta é uma estrutura basica de qualquer pagina de um site. -->
+
+    <!DOCTYPE html>
+    <HTML>
+        <HEAD>
+        </HEAD>
+
+        <BODY>
+        </BODY>
+    </HTML>
+    <!--: Neste exemplo <body> é FILHO de <html>, assim como <html> é PAI de <body>. -->
+
+<!--* TAGS FUNDAMENTAIS --------------------------------------------------------------------------------------------------------------->
+<!--: Estas TAGS são obrigatorias para que o site funcione corretamente. -->
+
+    <!DOCTYPE html> <!-- Informa que estamos contruindo um site em HTML 5. -->
+    <HTML>  </HTML> <!-- Documento HTML em si.                             -->
+    <HEAD>  </HEAD> <!-- Adicionamos as informações para o documento.      -->
+    <BODY>  </BODY> <!-- Parte visivel do site.                            -->
+
+<!--* ESTRUTURA PRONTA ---------------------------------------------------------------------------------------------------------------->
+<!--: O Visual Code adiciona esta estrutura HTML automaticamente assim que digitamos (! + Enter) em um documento HTML. -->
+
+<!DOCTYPE html>                                                            <!--|Informa que estamos contruindo um site em HTML 5.    |-->
+<html lang="en">                                                           <!--|Linguagem por padrão do site.                        |-->
+<head>
+    <meta charset="UTF-8">                                                 <!--|Integração com caracteres do padrão UTF-8.           |-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">                  <!--| |-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--| |-->
+    <title>Document</title>                                                <!--|Titulo do site.                                      |-->
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! ADICIONANDO A CSS -->
+<!--: CSS é uma ferramenta de estilização embutida no HTML, com ela podemos personalizar absolutamente tudo em nosso site. -->
+
+<!--* APLICANDO O CSS ----------------------------------------------------------------------------------------------------------------->
+<!--: Podemos aplicar a CSS a um ou mais elementos de 3 formas diferentes, INLINE, INTERNAL e EXTERNAL. -->
+
+<!--? INLINE -->
+<!--: Definindo o CSS diretamente no parametro de alguma TAG. Alteramos o estilo exclusivamente daquela TAG. -->
+
+    <h1 style="text-align: center;"> Este texto esta no centro </h1>
+
+<!--? INTERNAL -->
+<!--: Criando uma TAG <style> dentro de <head>. Dentro modificamos o estilo que será aplicado para todos daquela TAG. -->
+
+    <head>
+        <style>
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+<!--? EXTERNAL -->
+<!--: Criamos um arquivo CSS com todas as modificações e ligamos este arquivo ao nosso documento HTML. -->
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+<I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! ADICIONANDO O JAVASCRIPT -->
+<!--: JS é uma linguagem utilizada para criar interações em nosso site. -->
+
+<!--* APLICANDO O JAVASCRIPT ---------------------------------------------------------------------------------------------------------->
+<!--: Podemos aplicar o JS de 3 formas diferentes em nosso site, INLINE, INTERNAL e EXTERNAL. -->
+
+<!--? INLINE -->
+<!--: Utilizamos este metodo geralmente para aplicar funcões em algum determinado evento. -->
+
+    <button onclick="window.alert('Ola Mundo')"> Clique aqui </button>
+
+<!--? INTERNAL -->
+<!--: Criamos uma TAG <script> dentro de <body>. Aqui adicionamos todo o código em JS utilizado naquela pagina. -->
+
+    <script>
+        window.alert("Ola Mundo");
+    </script>
+
+<!--? EXTERNAL -->
+<!--: Criamos um arquivo JS com todo o código que poderá ser utilizado naquela e em outras paginas. -->
+<!--: Utilize este metodo o mais abaixo do código possivel, pois o compilador pausa para carregar o arquivo. -->
+
+    <script src="script.js" defer></script>
+
+<!--DICA:
+        + Caso queira adicionar o código mais a cima no documento, utilize o parametro "defer" para que o compilador não pause.
+-->
+
+<!--* JAVASCRIPT INDISPONIVEL --------------------------------------------------------------------------------------------------------->
+<!--: Poderá haver casos em que o navegador não suportará o JS, por isso utilizamos a TAG <noscript>. -->
+<!--: Esta TAG é utilizada para mostrar uma mensagem caso não seja posivel utilizar o JS. -->
+
+    <noscript> Não foi possivel utilizar o Javascript nesta pagina. </noscript>
+
+<I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! IDENTIFICADORES -->
+<!--: Identificadores/IDs é uma forma de dar um nome unico a um elemento, assim conseguimos marcar um determinado elemento. -->
+<!--: Importante resaltar que o ID dado a um elemento NÃO deve ser igual ao ID de outro elemento. -->
+
+<!--TODO: SINTAXE -->
+    <TAG id='NOME_ID'>
+
+<!--TODO: EXEMPLO -->
+    <H1 id="titulo-principal"></H1>
+
+<!--DICA:
+        + Utilize de Boas Praticas.
+            1° Todos os IDs estarão com letras MINUSCULAS do inicio ao fim.
+            2° Utilize hierarquias com [-], por exemplo: topo-menu-perfil.
+-->
+
+<I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! CLASSES -->
+<!--: Classes são formas de se classificar e agrupar uma série de elementos diferentes, assim conseguimos altera-los em conjunto. -->
+
+<!--TODO: SINTAXE -->
+    <TAG class="NOME_CLASSE">
+
+<!--TODO: EXEMPLO -->
+    <H1 class="titulos"></H1>
+    <H2 class="titulos destaque"></H2> <!-- Podemos definir mais de uma classe para um elemento. -->
+
+<!--DICA:
+        + Utilize de Boas Praticas.
+            1° Todos as CLASSES estarão com letras MINUSCULAS do inicio ao fim.
+            2° Utilize hierarquias com [-], por exemplo: topo-menu-perfil.
+            3° Não nomeie uma classe pela forma (ex: verde), nomeie pela funcionalidade (ex: basico).
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I>
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--|*********************************************************************************************************************************|--|            CAPITULO 1            |-->
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 01 >
+
+<!--? SUB-SUMÁRIO -->
+<CAPITULO_3 - TAGS BASICAS>
+
+<9> TEXTO
+    <9.1> TITULO    [H1-H6]
+    <9.2> PARAGRAFO [P]
+    <9.3> FORMATADORES DE TEXTO
+
+<15> ANCORA  [A]
+<10> IMAGENS
+    <10.1> IMAGEM [IMG]
+    <10.2> FOTOS  [PICTURE]
+    <10.3> FORMATOS DE IMAGEM
+    <10.4> CARREGAR IMAGEM
+
+<11> AUDIO   [AUDIO]
+<12> VIDEO   [VIDEO]
+<13> LEGENDA [TRACK]
+<14> MIDIAS  [SOURCE]
+
+<16> LISTAS
+    <16.1> LISTA ORDENADA         [OL]
+    <16.2> LISTA DESORDENADA      [UL]
+    <16.3> ITENS DE LISTAS        [LI]
+    <16.4> LISTAS DE DEFINIÇÃO    [DL]
+    <16.5> DEFINIÇÃO DE TERMO     [DT]
+    <16.6> DEFINIÇÃO DE DESCRIÇÃO [DD]
+
+<17> PRINCIPAL [MAIN]
+<18> GRUPO [DIV]
+
+<19> FORMULARIOS
+    <19.1> FORMULARIO [FORM]
+    <19.2> ENTRADA    [INPUT]
+    <19.3> BOTÃO      [BUTTON]
+
+
+<I############################################################################################################################## # 00 #>
+<_TEXTO_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! TITULO -------------------------------------------------------------------------------------------------------------------------->
+<!--: Titulos e Subtitulos. Seu valor varia de Intencidade/Nivel de 1(Forte) até 6(Fraco). -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: H1, H2, H3, H4, H5, H6>
+
+<!--TODO: SINTAXE -->
+    <H1> O Titulo vai aqui... </H1>
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<!--DICA 
+        + Não utilize niveis diferentes para alterar o tamanho da fonte.
+        + Evite pular niveis, sempre começe de H1, depois H2 e assim por indiante.
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! PARAGRAFO ------------------------------------------------------------------------------------------------------------------------>
+<!--: Paragrafos, Blocos de Texto. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: P>
+
+<!--TODO: SINTAXE -->
+    <P> Aqui vai o seu Paragrafo... </P>
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<!--DICA
+        + Paragrafos normalmente são blocos de texto, porem podemos adicionar varios outros elementos.
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! FORMATADORES DE TEXTO ------------------------------------------------------------------------------------------------------------>
+<!--: São TAGS que alteram um valor semantico ou visual de um texto. -->
+
+<!--* FORMATADORES SEMANTICOS -->
+    <strong>  Negrito   </strong>  <!-- Valor maior, maior força, grande importancia.                                              -->
+    <em>      Itálico       </em>  <!-- Siginificado extra, que deve se dar mais Destaque/Enfase.                 -->
+    <ins>    Sublinhado    </ins>  <!-- Texto que foi inserido posteriormente, novo.                                    -->
+    <del>     Riscado      </del>  <!-- Texto que foi deletado posteriormente, velho.                                   -->
+    <mark>    Marcado     </mark>  <!-- Marcado para melhor visualização, maior destaque.                         -->
+    <small>   Pequeno    </small>  <!-- Texto de complemento à algo, como em direitos autorais e outros comentários colaterais. -->
+    <sup>     Elevado      </sup>  <!-- Sobreescrito/Elevado. Exemplo: 2^4 (Dois elevado a quatro).            -->
+    <sub>       Base       </sub>  <!-- Subescrito/Base. Exemplo: H_2 O (Formula da agua).                   -->
+    <address> Endereco </address>  <!-- Indica um Endereço ou informação de Contato.                  -->
+    <code>     Código     </code>  <!-- Define um pedaço de codigo de computador.                    -->
+    <pre>    Tabulação     </pre>  <!-- Cria um bloco que obedece a todas as tabulações escritas no editor.           -->
+    <abbr>   Descrição    </abbr>  <!-- Define uma abreviação -->
+    <cite>     Citado     </cite>  <!-- Um texto que se refere a algo, fica em itálico. -->
+    <hr>                           <!-- Quebra os elementos em temas, uma linha horizontal. -->
+    <br>                           <!-- Quebra de linha. -->
+ 
+<!--? Citações ----------------------------------------------->
+    <q>          Citação Simples           </q> <!-- Adiciona aspas duplas em volta do texto selecionado.                          -->
+    <blockquote> Citação Completa </blockquote> <!-- Coloca o texto selecionado tabulado para o lado, indicando uma citação.       -->
+
+<!--TODO: PARAMETROS -->
+    CITE <!-- Define-se a URL de onde a citação esta se referindo. -->
+    
+
+<!--? Inverter ----------------------------------------------->
+    <bdo> Invertido </bdo> <!-- Inverte o texto selecionado -->
+
+<!--TODO: PARAMETROS -->
+    DIR <!-- Define para qual lado o texto esta invertido-->
+        + LTR <!-- Esquerda para a Direita -->
+        + RTL <!-- Direita para a Esquerda -->
+
+<!--* FORMATADORES VISUAIS -->
+<!--: Estas formatações são antigas, de uma epoca em que o HTML utilizava-se de estilos visuais. -->
+
+    <b>   Bold    </b> <!-- Negrito -->
+    <i>  Italic   </i> <!-- Itálico -->
+    <u> Underline </u> <!-- Sublinhado -->
+    <s>  Strike   </s> <!-- Riscado -->
+
+
+<I############################################################################################################################## # 00 #>
+<_ANCORA_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! ANCORA -------------------------------------------------------------------------------------------------------------------------->
+<!--: Ancoras são links em que voçê clica e pula para outro Documento/Site. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: A>
+
+<!--TODO: SINTAXE -->
+    <A href="pagina002.html" target="_self" rel="_next"> Este é um link </A>
+
+<!--TODO: PARAMETROS -->
+    HREF   <!-- Informa a URL/.html (Outra pagina) ou Arquivo (Download) ao qual o link aponta. -->
+    TARGET <!-- Especifica onde o documento deve ser aberto. -->
+        + _SELF  <!-- Na aba atual. -->
+        + _BLANK <!-- Em outra aba. -->
+
+    REL    <!-- Indica qual é a natureza do link atual. -->
+        + NEXT     <!-- Proxima pagina do documento atual. -->
+        + PREV     <!-- Pagina anterior do documento atual. -->
+        + EXTERNAL <!-- Link de outro site, que não faz parte deste documento. -->
+        + AUTHOR   <!-- Link para o site do autor que estamos referenciando. -->
+        + NOFOLLOW <!-- Link não pago. -->
+   
+    HREFLANG <!-- Informa qual é a linguagem utilizada no site de destino. -->
+
+    DOWNLOAD <!-- Caso definida torna o link um download, baixará o arquivo contido em "href". -->
+    TYPE     <!-- Qual é o Media Type do arquivo que será baixado { image/png }. (Pg: x) -->
+
+    MEDIA <!-- Informa uma Media Querie (Pg: x). -->
+
+
+<!--DICA
+        + Informe outro arquivo .html em "href" para criar um link a outra pagina do seu site.
+        + Sempre informe um parametro "rel", isto ajuda no mecanismo de busca do navegador.
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! BOOKMARKS/MARCADORES ------------------------------------------------------------------------------------------------------------>
+<!--: Podemos definir uma Ancora para que ela direcione o Usuário até um ponto especifico do site. -->
+
+<!--* MARCADORES DE LINK -->
+
+<!--TODO: INSTRUÇÕES-->
+    1° <!-- Crie um elemento e defina um "id". -->
+    2° <!-- Em um <A> defina o parameto "href" como (# + "id"). -->
+    3° <!-- Caso queira pular para um ponto em outra pagina, defina "href" como (arquivo.html + # + "id")-->
+
+<!--TODO: EXEMPLO -->
+    <H1 id="T5">Titulo 5</H1>   
+    <A href="#T5">Pular para o Titulo 5</A>
+    <A href="pagina002.html#T5">Pular dentro de outra pagina</A>
+
+
+<I############################################################################################################################## # 00 #>
+<_IMAGENS_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! IMAGEM -------------------------------------------------------------------------------------------------------------------------->
+<!--: Utilizamos para inserir uma imagem em uma pagina WEB. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: IMG>
+
+<!--TODO: SINTAXE -->
+    <IMG src="imagem.png" alt="Texto Alternativo">
+
+<!--TODO: PARAMETROS -->
+    SRC    <!-- Especifica o caminho da imagem. { Imagem.png } -->
+    ALT    <!-- Texto alternativo para a imagem caso ela não possa ser carregada. -->
+    USEMAP <!-- Define um mapa de Imagem (Pg: x). -->
+    SRCSET 
+
+<!--DICA
+        + Sempre utilize textos explicativos em "alt" para os leitores.
+-->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! PICTURES ------------------------------------------------------------------------------------------------------------------------>
+<!--: Pictures são containers que definem uma imagem diferente para dispositivos de tamanhos diferentes. -->
+<!--: Utilizamos a TAG <source>. (Pg: x) -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: PICTURE>
+
+<!--TODO SINTAXE -->
+    <PICTURE>
+        <SOURCE media="(max-width: 750px)" srcset="foto-Pequena.png" type="image/png">
+        <IMG src="foto-Grande.png" alt="Imagem Redimencionavel">
+    </PICTURE>
+
+    <!-- Verifica se a largura da pagina tem um maximo de 750 pixels, se sim aplica a imagem "foto-Pequena.png". -->
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! MAPA DE IMAGEM ------------------------------------------------------------------------------------------------------------------>
+<!--: Com um Mapa de Imagem podemos criar diferentes areas dentro de uma imagem. -->
+
+--<TAGS: MAP, AREA>
+
+<!--* MAPA ---------------------------------------------------------------------------------------------------------------------------->
+<!--: Criamos o mapa utilizado na imagem. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: MAP>
+
+<!--TODO: SINTAXE -->
+    <MAP name="Mapa_Imagem">
+        <AREA>
+    </MAP>
+
+    <IMG src="" alt="" usemap="Mapa_Imagem">
+
+<!--TODO: PARAMETROS -->
+    NAME <!-- Informa o nome do mapa. -->
+
+<!--DICA
+        + Utilize o parametro "usemap" em um <img> para utilizar um mapa de imagem.
+-->
+
+<!--* AREA ---------------------------------------------------------------------------------------------------------------------------->
+<!--: São as areas clicaveis dentro do mapa-->
+
+--<PAI: MAP>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: AREA>
+
+<!--TODO: SINTAXE -->
+    <AREA shape="rect" coords="100, 600, 300, 200">
+
+<!--TODO: PARAMETROS -->
+    SHAPE <!-- Informa o formato da area criada, para cada formato o valor do parametro "coords" será alterado. -->
+        + REACT   <!-- Area retangular. -->
+        + CIRCLE  <!-- Area circular. -->
+        + POLY    <!-- Area poligonal. -->
+        + DEFAULT <!-- Toda a area selecionada. -->
+    
+    COORDS <!-- Define as cordenadas em pixels da area que será selecionada. -->  
+    <!-- REACT:  Dois pares de valores X e Y. (Canto superior esquerdo) e (Canto Inferior direito). -->
+    <!-- CIRCLE: Um par de valores. (Ponto X e Y do centro do Circulo) e (Tamanho do Raio do circulo em pixels). --> 
+    <!-- POLY:   Dois ou Mais pares de Valor X e Y, Cria um tracejado navegando por todos os pares de X e Y. -->
+    
+    HREF   <!-- Informa um link ou arquivo que sera aberto quando a area selecionada for clicada. -->
+    TARGET <!-- Especifica onde o documento deve ser aberto. -->
+        + _SELF  <!-- Na aba atual. -->
+        + _BLANK <!-- Em outra aba. -->
+
+    REL    <!-- Indica qual é a natureza do link atual. -->
+        + NEXT     <!-- Proxima pagina do documento atual. -->
+        + PREV     <!-- Pagina anterior do documento atual. -->
+        + EXTERNAL <!-- Link de outro site, que não faz parte deste documento. -->
+        + AUTHOR   <!-- Link para o site do autor que estamos referenciando. -->
+        + NOFOLLOW <!-- Link não pago. -->
+   
+    HREFLANG <!-- Informa qual é a linguagem utilizada no site de destino. -->
+
+    DOWNLOAD <!-- Caso definida torna o link um download, baixará o arquivo contido em "href". -->
+    TYPE     <!-- Qual é o Media Type do arquivo que será baixado { image/png }. (Pg: x) -->
+
+    MEDIA <!-- Informa uma Media Querie (Pg: x). -->
+
+
+<!--DICA
+        + Veja uma explicação melhor em: https://www.w3schools.com/html/html_images_imagemap.asp
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! CARREGAMENTO DE IMAGENS --------------------------------------------------------------------------------------------------------->
+<!--: Podemos carregar uma imagem de 3 formas diferentes. -->
+
+<!--? Imagem na mesma pasta do HTML. -->
+    <img src="imagem.png" alt="">
+
+<!--? Imagem em outra pasta. -->
+    <img src="pasta/imagem.png" alt="">
+
+<!--? Imagem de outro site. -->
+    <img src="https://bognarjunior.files.wordpress.com/2018/01/1crcyaithv7aiqh1z93v99q.png" alt="">
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! FORMATOS DE IMAGENS ------------------------------------------------------------------------------------------------------------->
+
+    JPG  <!-- Maior capacidade de compactação com menor armazenamento, porem menor qualidade  [Compacte entre 30% e 50%]. -->
+    PNG  <!-- Torna o fundo transparente e de maior qualidade, porem contem compactação reduzida e maior armazenamento.   -->
+    ICO  <!-- Formato amplamente utilizado para ícones em paginas e aplicativos.                                          -->
+
+    Em um site o tamanho maximo recomendavel de uma imagem é de 1500 pixels de largura.
+
+
+<I############################################################################################################################## # 00 #>
+<_AUDIOS_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! AUDIO --------------------------------------------------------------------------------------------------------------------------->
+<!--: Utilizamos para incorporar um som dentro de uma pagina. -->
+<!--: Podemos utilizar a TAG <source>. (Pg: x) -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: AUDIO>
+
+<!--TODO: SINTAXE -->
+    <AUDIO src="audio.ogg" preload="auto" autoplay controls>
+        <SOURCE>
+        Infelizmente não foi possivel carregar o audio. 
+    </AUDIO>
+
+<!--TODO: PARAMETROS -->
+    SRC      <!-- Caminho para o arquivo de audio. -->
+    AUTOPLAY <!-- Informa se o controle ira tocar automaticamente assim que a pagina for aberta. -->
+    CONTROLS <!-- Quando especificado habilida os botões de controle do componente de audio. -->
+    LOOP     <!-- Se especificado fará com que o controle reinicie ao final do audio. -->
+    PRELOAD  <!-- Indica qual opção de carregamento será efetuado pelo navegador. -->
+        + AUTO     <!-- Carrega o audio inteiro assim que a pagina é carregada, mesmo se o usuário não inicia-lo. -->
+        + METADATA <!-- Carrega apenas as informações do arquivo, como Tamanho, Tempo, Informações de Direitos, etc... -->
+        + NONE     <!-- Não carrega absolutamente nada, exceto quando o usuário der play no audio. -->
+
+
+<!--DICA
+        + Os compontentes internos do <Audio> são carregados apenas se o parametro "SRC" não conseguir ser carregado.
+-->
+
+<I############################################################################################################################## # 00 #>
+<_VIDEOS_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! VIDEO --------------------------------------------------------------------------------------------------------------------------->
+<!--: Utilizada para incorporar algum conteudo de video no site. Podemos incorporar de duas formas, Hospedagem Interna e Externa. -->
+
+<!--* HOSPEDAGEM INTERNA -->
+<!--: Incorporamos um player de video proprio em nosso site. -->
+<!--: Podemos utilizar a TAG <source>. (Pg: x) -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: VIDEO>
+
+<!--TODO: SINTAXE -->
+    <VIDEO src="video.mp4" poster="" autoplay controls>
+        <SOURCE>
+        Infelizmente não foi possivel carregar o video. 
+    </VIDEO>
+
+<!--TODO: PARAMETROS -->
+    SRC      <!-- Caminho para o arquivo de video. -->
+    POSTER   <!-- Arquivo de imagem que sera utilizado de Tumbnail. -->
+    AUTOPLAY <!-- Informa se o controle ira tocar automaticamente assim que a pagina for aberta. -->
+    CONTROLS <!-- Quando especificado habilida os botões de controle do componente de video. -->
+    LOOP     <!-- Se especificado fará com que o controle reinicie ao final do audio. -->
+    MUTED    <!-- Quando definido tornara o audio do componente mudo como padrão. -->
+    PRELOAD  <!-- Indica qual opção de carregamento será efetuado pelo navegador. -->
+        + AUTO     <!-- Carrega o video inteiro assim que a pagina é carregada, mesmo se o usuário não inicia-lo. -->
+        + METADATA <!-- Carrega apenas as informações do arquivo, como Tamanho, Tempo, Informações de Direitos, etc... -->
+        + NONE     <!-- Não carrega absolutamente nada, exceto quando o usuário der play no video. -->
+
+    WIDTH    <!-- A largura do controle em pixels de CSS. -->
+    HEIGHT   <!-- A altura do controle em pixels de CSS. -->
+
+
+<!--DICA
+        + Os compontentes internos do <Video> são carregados apenas se o parametro "src" não conseguir ser carregado.
+-->
+
+<!--* HOSPEDAGEM EXTERNA -->
+<!--: Incorporamos um player de video apartir de um servidor como Youtube ou Vimeo. -->
+<!--: Adquirimos o código pronto a partir de um video em: Compartilhar -> Incorporar -> Copiar. -->
+
+<!--TODO: EXEMPLO -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/B4FU3NFRTDw" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+
+<I############################################################################################################################## # 00 #>
+<_LEGENDAS_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! TRACK --------------------------------------------------------------------------------------------------------------------------->
+<!--: Permite trabalhar com legendas em arquivos de Audio ou Video. -->
+
+--<PAI: AUDIO, VIDEO>
+--<FECHAMENTO: INEXISTENTE>
+--<NOME: TRACK>
+
+<!--TODO: SINTAXE -->
+    <TRACK src="legenda.vtt" kind="" defaut label>
+
+<!--TODO: PARAMETROS -->
+    SRC     <!-- Caminho para o arquivo de Legenda. -->
+    SRCLANG <!-- Informa a linguagem utilizada na legenda, obrigatoria caso "kind = Subtitles". -->
+    KIND    <!-- Indica qual é o tipo de faixa. -->
+        + SUBTITLES
+        + CAPTION 
+        + DESCRIPTIONS
+        + CHAPTERS
+        + METADATA
+
+    LABEL  <!-- Especifica o titulo da legenda.-->
+    DEFAUT <!-- Indica que a legenda deve ser iniciada apenas se as preferencias do usuário não indicarem outra legenda. -->
+
+
+<I############################################################################################################################## # 00 #>
+<_LISTAS_>
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! ORDENED LIST -------------------------------------------------------------------------------------------------------------------->
+<!--: Representa uma lista ordenada, seu valor aumenta em relação ao numero anterior. -->
+<!--: A TAG <LI> é utilizada em conjunto para definir cada item da lista. (Pg: x) -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: OL>
+
+<!--TODO: SINTAXE -->
+    <OL type="1">
+        <LI> Item 1
+        <LI> Item 2
+    </OL>
+
+<!--TODO: PARAMETROS -->
+    TYPE <!-- Indica qual estilo de enumeração que será utilizado naquela lista. -->
+        + 1 <!-- Enumerada. -->
+        + A <!-- Alfabetica em Maiusculas. -->
+        + a <!-- Alfabetica em Minusculas. -->
+        + I <!-- Romanos em Maiusculas. -->
+        + i <!-- Romanos em Minusculas. -->
+
+    STARTS   <!-- Indica em qual posição a lista se inicializará, contagem apartir do 1. -->
+    REVERSED <!-- Informa que a lista será em ordem inversa (9, 8, 7...). -->
+
+<!--DICA
+        + Utilize de lista dentro de outras listas para criar sub-itens.
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! UNORDERED LIST ------------------------------------------------------------------------------------------------------------------>
+<!--: Representa uma lista desordenada, que não possui uma ordem natural-->
+<!--: A TAG <LI> é utilizada em conjunto para definir cada item da lista. (Pg: x) -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: UL>
+
+<!--TODO: SINTAXE -->
+    <UL type="discle">
+        <LI> Item
+        <LI> Item
+    </UL>
+
+<!--TODO: PARAMETRO -->
+    TYPE   <!-- Indica qual estilo de marcador será utilizado naquela lista. -->
+        + DISCLE <!-- Consiste em uma bolinha pintada. (Padrão) -->
+        + CIRCLE <!-- Consiste em um circulo de borda preta e interior branco. -->
+        + SQUARE <!-- Consiste em um quadrado printado de preto. -->
+
+<!--DICA
+        + Utilize de lista dentro de outras listas para criar sub-itens.
+-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! ITEM LIST ----------------------------------------------------------------------------------------------------------------------->
+<!--: Representa cada item de uma lista ordenada ou desordenada e de menus. -->
+
+--<PAI: OL, UL, MENU>
+--<FECHAMENTO: OPCIONAL>
+--<NOME LI>
+
+<!--TODO: SINTAXE -->
+    <LI> Nome do Item.
+
+<!--TODO: PARAMETROS -->
+    VALUE <!-- Valor numerico que aquele item assumirá, os proximos seguirão a ordem. Funciona apenas em Ordened Lists. (Pg: x) -->
+    TYPE  <!-- Indica qual será o novo estilo de lista apartir daquele momento, segue os padrões de cada tipo de lista (OL e UL) -->
+        + 1 <!-- Enumerada.                                                                  (Exclusiva para itens em Ordened Lists) -->
+        + A <!-- Alfabetica em Maiusculas.                                                   (Exclusiva para itens em Ordened Lists) -->
+        + a <!-- Alfabetica em Minusculas.                                                   (Exclusiva para itens em Ordened Lists) -->
+        + I <!-- Romanos em Maiusculas.                                                      (Exclusiva para itens em Ordened Lists) -->
+        + i <!-- Romanos em Minusculas.                                                      (Exclusiva para itens em Ordened Lists) -->
+        + DISCLE <!-- Consiste em uma bolinha pintada.                                     (Exclusiva para itens em Unordered Lists) -->
+        + CIRCLE <!-- Consiste em um circulo de borda preta e interior branco.             (Exclusiva para itens em Unordered Lists) -->
+        + SQUARE <!-- Consiste em um quadrado printado de preto.                           (Exclusiva para itens em Unordered Lists) -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! DESCRIPTION LIST ---------------------------------------------------------------------------------------------------------------->
+<!--: São listas que contem primordialmente um item tópico com alguma descrição abaixo. -->
+<!--: As TAGS <DT> (Pg: x) e <DD> (Pg: x) são utilizadas. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: DL>
+
+<!--TODO: SINTAXE -->
+    <DL>
+        <DT> Termo
+        <DD> Descrição
+    </DL>
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<!--DICA
+        + Permita-se utilizar varios termos para uma descrição, varias descrições para um Termo ou então misturar tudo. 
+-->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! DESCRIPTION TERM ---------------------------------------------------------------------------------------------------------------->
+<!--: Define um termo contido em uma Description List. (Pg: x) -->
+
+--<PAI: DL>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: DT>
+
+<!--TODO: SINTAXE -->
+    <DT> Nome do Termo
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! DESCRIPTION DETAILS ------------------------------------------------------------------------------------------------------------->
+<!--: Define uma descrição para um termo em uma Description List. (Pg: x) -->
+
+--<PAI: DL>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: DD>
+
+<!--TODO: SINTAXE -->
+    <DD> Nome da Descrição
+
+<!--TODO: PARAMETROS -->
+    APENAS OS ATRIBUTOS GLOBAIS
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I>
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--|*********************************************************************************************************************************|--|            CAPITULO 1            |-->
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! LINKS ------------------------------------------------------------------------------------------------------------------------>
+<!--: Utilizamos esta tag para ligar um arquivo ao documento HTML. -->
+
+--<PAI: HEAD>
+--<FECHAMENTO: OPCIONAL>
+--<NOME: LINK>
+
+<!--TODO: SINTAXE -->
+    <link rel="" href="">
+
+<!--TODO: PARAMETROS -->
+    REL  <!-- Informa o tipo de documento que estamos ligando. -->
+        + SHORTCUT ICON <!-- Icone na aba da pagina. --> 
+        + STYLESHEET    <!-- Arquivo CSS da pagina. -->
+
+    HREF  <!-- Caminho para o arquivo. -->
+    TYPE  <!-- Informa o Media Type do arquivo vinculado. (Pg: x) -->
+    MEDIA <!-- Determina uma Media Querie. (Pg: x) -->
+
+<!-- DICA:
+        + A Tag Link pode ocorrer apenas no Head, porem podem haver varias ocorrencias do Link.
+-->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! SOURCES ------------------------------------------------------------------------------------------------------------------------>
+<!--: Definimos 1 ou mais sources para especificar varios arquivos de midia para diferentes casos. -->
+<!--: O navegador testa sempre o 1° source, caso não funcione ele pula para baixo. -->
+
+--<PAI: PICTURE, AUDIO, VIDEO>
+--<FECHAMENTO: INEXISTENTE>
+--<NOME: SOURCE>
+
+<!--TODO: SINTAXE -->
+    <SOURCE src="" media="" type="">
+
+<!--TODO: PARAMETROS -->
+    SRC    <!-- Define o caminho de um Audio ou Video para aquele source. -->
+    SRCSET <!-- Define o caminho de uma Imagem alternativa para aquele source. -->
+
+    TYPE  <!-- Define o Media Type daquele arquivo. (Pg: x) -->
+    MEDIA <!-- Requisito Media Querie que o <source> deve atender para que o arquivo seja selecionado. (Pg: x) -->
+    SIZES <!-- Informa o tamanho da imagem para dispositivos diferentes. -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 00.0 >
+<!--! DIVISOR ------------------------------------------------------------------------------------------------------------------------->
+<!--: Um divisor é utilzado para agrupar elementos HTML e organizalos. Muito utilizado para estilizações em CSS. -->
+
+--<PAI: BODY>
+--<FECHAMENTO: OBRIGATORIO>
+--<NOME: DIV>
+
+<!--TODO: SINTAXE -->
+    <DIV> Os elementos vão aqui... </DIV>
+
+<!--TODO: PARAMETROS -->
+    APENAS OS PARAMETROS GLOBAIS
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I>
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--|*********************************************************************************************************************************|--|            CAPITULO 1            |-->
+<!--|*********************************************************************************************************************************|--|**********************************|-->
+<!--! RASCUNHOS -->
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--|*********************************************************************************************************************************************--**************************|-->
+<!--|*********************************************************************************************************************************************--**************************|-->
+<!--|*********************************************************************************************************************************************--**************************|-->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! CONTAINERS -->
+<!--: -->
+
+<!--? MAIN ----------------------------------------------------------------------------------------------------------------------------->
+<!--: A Main define o que será considerado o conteudo principal do site. -->
+
+--<CHILD: BODY>
+--<OMISSÃO: INVALIDA>
+
+--<MAIN> CONTEÚDO </MAIN>
+
+    Permite apenas os conteúdos globais.
+
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! FORMULARIOS -->
+<!--: -->
+
+
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! AUDIOS -->
+
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! VIDEOS -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! SIMBOLOS E EMOJIS -->
+<!--: Em HTML Alguns simbolos não podem ser digitados no teclado. -->
+<!--: Ou então podemos utilizar um simbolo ou emoji que não esta contido no teclado. -->
+
+<!--* SIMBOLOS -->
+<!-- Utilizamos o Ssimbolo (&) acompanhado da sigla do sombolo e fechado por (;). -->
+<!-- Passe o mouse por cima para ter uma vizualização do simbolo. -->
+
+    &lt; Menor
+    &gt; Maior
+
+    &nbsp; Espaço em Branco
+    &reg; Marca Registrada
+    &copy; Copyright
+    &trade; Trade Mark
+    &euro; Euro
+    &pound; Libra
+    &yen; Yen
+    &cent; Cent
+    &empty; Vazio
+    &sum; Soma
+    &delta; Delta
+    &larr; Seta Esquerda
+    &uarr; Seta Acima
+    &rarr; Seta Direita
+    &darr; Seta baixado
+
+Para mais simbolos acesse: https://www.toptal.com/designers/htmlarrows/symbols/
+
+<!--* EMOJIS -->
+<!-- Para emojis sempre utilizamos (&#x) junto de seu respectivo codigo hexadeximal. -->
+<!-- Algumas vezes um emoji pode ver deste geito: (U+1F603), nestes casos troque (U+) por (&#x). -->
+
+    &#x1F603; Carinha Feliz
+    &#x1F923; Chorando de Rir
+    &#x1F60D; Olhos de Coração
+
+Para mais emojis acesse: https://emojipedia.org/
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! MEDIA TYPES -->
+<!--: Media Type é uma forma de especificar o tipo de arquivo que será carregado ou baixado pelo site. -->
+
+<!-- Arquivos -->                            <!-- Texto -->                             <!-- Fonte -->
+    application/zip                              text/html                                  font/ttf 
+                                                 text/css 
+                                                 text/javascript 
+
+<!-- Video -->                               <!-- Audio -->                             <!-- Imagens -->
+    video/mp4                                    audio/aac                                  image/jpeg 
+    video/H264                                   audio/mpeg                                 image/png 
+    video/JPEG 
+
+
+Mais MEDIA TYPES: https://www.iana.org/assignments/media-types/media-types.xhtml
+
+<!--* COMPATIBILIDADE -->
+
+Microsoft Edge  <!-- (.mp4 .m4v) -->
+Apple Safari    <!-- (.mp4 .m4v) -->
+Google Chrome   <!-- (.mp4 .m4v .webm .ogv) -->
+Mozilla Firefox <!-- (.webm .ogv) -->
+Opera .webm     <!-- (.ogv) -->
+
+
+<I++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I 0 >
+<!--! MEDIA QUERIES -->
+<!--: Media Queries é uma forma de se excutar uma tag apenas se o parametro "media" atendender as especificações do CSS. -->
+
+<source media="(min-width: 300px)" srcset="imagem.png">
+    <!-- Executa este <source> apenas se a pagina tiver uma largura minima de 300 pixels, caso sim define a imagem na pagina. -->
+
+<!--* MEDIA -->
+
+    min-width: <!-- Largura minima -->
+    max-width: <!-- Largura maxima -->
+

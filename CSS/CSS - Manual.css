@@ -1,0 +1,834 @@
+/*| Autor.............: Henrique Campos Jonck - 17 Anos |*/
+/*| Data de Inicio....: 21/09/2021                      |*/
+/*| Guia de Linguagem.: CSS                             |*/
+
+/*? SUMÁRIO GERAL */
+---------------------------------------------
+#CAPITULO_1 - INTRODUÇÃO_A_LINGUAGEM
+{
+    01 - INTRODUÇÃO
+    02 - UTILIZANDO O CSS
+}
+---------------------------------------------
+#CAPITULO_2 - CONTEUDO_BASICO
+{
+    03 - ESTRUTURA DE DECLARAÇÃO
+    04 - SELETORES
+    05 - SELEÇÃO DE CORES
+}
+---------------------------------------------
+#CAPITULO_3 - PARAMETROS COMPLEXOS
+{
+    00 - DIMENCIONAMENTO
+    00 - FONTES
+    00 - BORDAS
+    00 - PLANO DE FUNDO
+    00 - PONTEIROS
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 1            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! INTRODUÇÃO */
+/*: CSS é utilizado para dar Design/Layout a uma pagina. */
+/*: Com CSS podemos alterar a fonte, cor, alinhamento, tamanho, espaçamento e etc... */
+
+    CSS {/* CASCADING STYLE SHEETS - Folhas de Estilo em Cascata */}
+
+/* DICA:
+        + A palavra CASCATA vem do fato de que se aplicarmos um estilo a um elemento este estilo será aplicado tambem a todos os
+        elementos filhos do pai. Por exemplo: Se definirmos a cor do texto de <body> para Azul, todos os textos e titulos contidos
+        em <body> tambem serão da cor Azul, a menos que especifiquemos outra coisa.
+*/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! UTILIZANDO O CSS */
+/*: Dentro de um documento HTML podemos definir um estilo de 3 formas diferentes. */
+
+    .Inline  {/* Usando o parametro "style" detro de um elemento HTML.           */}
+    .Interno {/* Usando uma TAG <style> dentro de <head> em um documento HTML.   */}
+    .Externo {/* Usando um elemento <link> para vincular um arquivo CSS externo. */}
+
+/*: Veja uma melhor explicação na Pagina: x do Manual de HTML. */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 1            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! ESTRUTURA DE DECLARAÇÃO */
+/*: Uma estrutura de declaração é a base para se definir o estilo de um elemento. */
+/*: Vale resaltar que esta modificação serve para todos os elementos da mesma TAG e tambem seus filhos. */
+
+/** DEFININDO OS VALORES ==============================================================================================================*/
+/*: Para isso precisamos de 3 informações: */
+
+    .1 { Qual elemento estamos modificando?     } /* SELETOR     */
+    .2 { O que estamos modificando naquela TAG? } /* PROPRIEDADE */
+    .3 { Como será o novo estilo?               } /* VALOR       */
+
+/** MONTANDO A ESTRUTURA ==============================================================================================================*/
+/*: Tendo os 3 valores definidos (Seletor, Propriedade e Valor) montamos a estrutura. */
+
+/*TODO: SINTAXE */
+    SELETOR{
+        PROPRIEDADE : VALOR ;
+    }
+
+/*TODO: EXEMPLO */
+    H1{
+        Text-Align: center;   
+    /*
+        SELETOR....: Desejo modificar todas as Tags <H1>.
+        PROPRIEDADE: Quero modificar seu alinhamento de texto. [Text-Align]
+        VALOR......: Seu novo valor será de alinhamento centralizado. [Center]
+    */
+    }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! SELETORES */
+/*: Como vimos na pagina anterior, utilizamos seletores para encontrar qual elemento desejamos estilizar. */
+
+/** CATEGORIAS DE SELETORES ===========================================================================================================*/
+/*: Podemos identificar um elemento de diversas formas, não apenas pela sua TAG. */
+/*: Cada tipo de Seletor seleciona os elemento com base em um determinado valor. */
+
+    SELETORES SIMPLES             {/* NOME, ID, CLASSE.              */}
+    SELETORES COMBINADORES        {/* RELAÇÃO ESPECÍFICA entre eles. */}
+    SELETORES DE PSEUDO-CLASSE    {/* DETERMINADO ESTADO.            */}
+    SELETORES DE PSEUDO-ELEMENTOS {/* PARTE DE UM ELEMENTO.          */}
+    SELETORES DE ATRIBUTOS        {/* ATRIBUTO ou VALOR DE ATRIBUTO. */}
+
+
+/** SELETORES SIMPLES =================================================================================================================*/
+/*? SELETOR POR ELEMENTO --------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona todos os elementos com a TAG selecionada. */
+
+/*TODO: SINTAXE */ 
+    SELETOR{
+        PROPRIEDADE: VALOR;
+    }
+
+/*TODO: EXEMPLOS */
+    BODY{/* Seleciona o elemento <body>. */
+        color: blue;
+    }
+
+    H1, H2, P{/* Seleciona todos os elementos especificados. */
+        text-align: center;
+    }
+
+/*? SELETOR POR ID --------------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona todos os elementos com o "ID" selecionado. */
+
+/*TODO: SINTAXE */
+    #NOME_ID{
+        PARAMETRO: VALOR;
+    }
+
+/*TODO: EXEMPLO */
+    #para1{/* Seleciona todos os elemento com o ID = "para1". */
+        text-align: center;
+    }
+
+    H1#principal{/* Seleciona o ID = "para1" apenas dos elementos <h1>. */
+        text-align: center;
+    }
+
+/*? SELETOR POR CLASSE ----------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona todos os elementos com a "CLASSE" selecionada. */
+
+/*TODO: SINTAXE */
+    .NOME_CLASSE{
+        PARAMETRO: VALOR;
+    }
+
+/*TODO: EXEMPLOS */
+    .center{/* Seleciona todos os elementos com a CLASSE = "center" */
+        text-align: center;
+    }
+
+    P.intro{/* Seleciona a CLASSE = "intro" apenas dos elementos <p>. */
+        text-align: center;
+    }
+
+/*? SELETOR UNIVERSAL -----------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona absolutamente todos os elementos do HTML. */
+
+    *{/* Agora todos os elementos do HTML estarão com o texto centralizado. */
+        text-align: center;
+    }
+
+
+/** SELETORES DE PSEUDO-CLASSE ========================================================================================================*/
+/*? SELETOR DE EVENTOS ----------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona um elemento com base em um Evento ou Estado atual do elemento (Ex: clicado, visivel, ...). */
+
+/*TODO: SINTAXE */
+    SELETOR:EVENTO{
+        PROPRIEDADE: VALOR;
+    }
+
+/*TODO: EXEMPLOS */
+    DIV:hover{/* Altera o plano de fundo de todas as DIVs quando o mouse passar por cima (Hover). */
+        background-color: blue;
+    }
+
+    .center:active{/* Altera o alinhamento do texto para justificado nos elemento com classe "center" no evento de clique. */
+        text-align: justify;
+    }
+
+
+/*? SELETOR DE CHILDS -----------------------------------------------------------------------------------------------------------------*/
+/*: Seleciona um elemento que esteja DENTRO de outro elemento especifico. */
+
+/*TODO: SINTAXE */
+    SELETOR > FILHO{
+        PROPRIEDADE: VALOR;
+    }
+
+/*TODO: EXEMPLO */
+    DIV > P{/* Altera o alinhamento de todos os <p> que estejam dentro de um <div>. */
+        text-align: justify;
+    }
+
+    DIV:hover > P{/* Seleciona todos os <p> que estejam dentro de um <div> porem apenas quando o mouse estiver por cima. */
+        display: block;
+    }
+
+
+/** SELETORES DE PSEUDO-ELEMENTOS =====================================================================================================*/
+/*: Seleciona um determinado pedaço de um elemento, como: Primeira letra, Primeira Linha, etc... */
+
+/*TODO: SINTAXE */
+    SELETOR::PEDAÇO{
+        PROPRIEDADE: VALOR;
+    }
+
+/*TODO: EXEMPLOS */
+    P::first-line{
+        color: black;
+    }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! SELEÇÃO DE CORES */
+/*: Podemos especificar uma cor de diversas formas em CSS. */
+/*: Podemos chamar pelo seu respectivo nome ou então por valores HEX, RGB, HLS, RGBA, HLSA. */
+
+/** DEFININDO PELO NOME ===============================================================================================================*/
+/*: Esta pratica não é muito recomendada por ser extremamente limitada comparada as 65 milhoes de cores existentes. */
+
+    .NOME_COR
+    {
+        /* Definimos as cores com base em seu nome (Azul, Verde e Alaranjado). */
+
+        background-color: blue;
+        border-color: green;
+        color: orangered;
+    }
+
+/** DEFININDO POR UM VALOR ============================================================================================================*/
+/*: Definindo por um valor conseguimos alcançar uma infinidade de cores novas. Existem 3 metodos: (Hexadecimal, RGB e HLS). */
+
+    .RGB
+    {
+        /* Especificamos um valor RGB pela segla [rgb]. */
+        /* Seu valor deve ser inserido entre parenteses. Sendo dividio em (Red, Green, Blue) e separado por [,]. */
+
+        background-color: rgb(0, 0, 255);
+        border-color: rgb(0, 128, 0);
+        color: rgb(255, 69, 0);
+    }
+
+    .HEXADECIMAL
+    {
+        /* Especificamos um código HEX utlizando o sinal de [#]. */
+        /* O valor em HEX é dividido em pares: (00 00 ff). Sendo cada par um valor de 0 a 255 porem em base Hexadecimal. */
+        /* Cada par representa um valor em RGB. */
+
+        background-color: #0000ff;
+        border-color: #008000;
+        color: #ff4500;
+    }
+
+    .HSL
+    {
+        /* Especificamos um valor HSL pela sigla [hsl]. */
+        /* Seu valor deve ser inserido entre parenteses. Sendo dividio em (Hue, Saturation, Luminosity) e separado por [,]. */
+        /* Seu valor [s] e [l] devem ser informados em valor de porcentagem. */
+        /* (Hue, Saturation, Luminosity) -> Matiz, Saturação, Luminosidade*/
+
+        background-color: hsl(240, 100%, 50%);
+        border-color: hsl(120, 100%, 25%);
+        color: hsl(16, 100%, 50%);
+    }
+
+/** TRANSPARENCIA =====================================================================================================================*/
+/*: Alem de escolhermos uma cor tambem podemos definir seu nivel de transparencia. Este metodo não funciona com cores por NOME. */
+
+    .TRANSPARENCIA
+    {
+        /* Definimos uma transparencia adicionando um 4 parametro chamado "Alfa". */
+        /* Nas definições de RGB e HLS sua sigla precisa acrescentar o [a], Ficando [rgba] e [hlsa] respectivamente. */
+        /* O valor "Alfa" é definido em uma escala de (0 a 1.000). Com exceção do HEX que apenas adiciona um novo par de valores. */
+
+        background-color: rgba(0, 0, 255, 0.623);
+        border-color: #00800056;
+        color: hsla(16, 100%, 50%, 0.144);
+    }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! TIPOGRAFIAS */
+/*: Tipografia é o estudo da escrita de fontes impressas. */
+
+/** CATEGORIAS DE FONTES ==============================================================================================================*/
+/*: Todas as fontes são divididas entre 5 posiveis categorias. */
+
+    SERIF      {/* Indica fontes que POSSUEM Serifa em sua estrutura.                                                  */}
+    SANS-SERIF {/* Indica fontes que NÃO utilizam Serifa em sua estrutura.                                             */}
+    MONOSPACE  {/* São fontes em que cada caractere ocupa exatamente o mesmo espaço, podem ser Serifadas ou Não.       */}
+    CURSIVE    {/* São fontes que simulam a escrita cursiva humana.                                                    */}
+    FANTASY    {/* Referece a todas as outras fontes que não atendem a nenhum tipo anterior, são fontes comemorativas. */}
+
+
+/** SELEÇÃO DE FONTES =================================================================================================================*/
+/*: Em CSS utilizamos esta propriedade para informar qual fonte utilizaremos em um determinado elemento. */
+
+/*TODO: SINTAXE */
+    #PARAMETRO{
+        font-family: ;
+    }
+
+/** FONTES SEGURAS ====================================================================================================================*/
+/*: Nem todos os dispositivos são capazes de utilizar alguma fonte, por isso utilizamos mais de uma fonte como forma de segurança. */
+/*: Ao fim de uma definição de fonte sempre informe uma CATEGORIA DE FONTE generica como ultima opção. */
+
+/*TODO: EXEMPLO */
+    #VALOR{
+        font-family: Arial, Helvetica, sans-serif;
+        /* Neste exemplo a primeira fonte testada é a "Arial", caso ela não possa ser utilizada passa para a proxima. */
+        /* Caso nenhuma fonte possa ser utilizada, procurará por qualquer fonte não serifada (Sans-Serif).    */
+
+        font-family: 'Courier New', Courier, monospace;
+        /* Fontes separadas por espaco devem ser colocadas entre aspas. */
+    }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! TAMANHOS */
+/*: Em CSS podemos definir o tamanho de um elemento de diversas formas diferentes utilizando diferentes unidades de medida. */
+
+/** TAMANHO ABSOLUTO ==================================================================================================================*/
+/*: São unidades de medida fixas, que utilizam um valor fisico. */
+
+    _CM {/* Medida em Centimetros */}
+    _MM {/* Medida em Milimetros  */}
+    _IN {/* Medida em Polegadas   */}
+
+    _PX {/* Medida em Pixels */}
+    _PT {/* Medida em Pontos */}
+    _PC {/* Medida em Paicas */}
+
+/** TAMANHO RELATIVO ==================================================================================================================*/
+/*: São unidades de medida que levam como base outra unidade de medida. */
+
+    _EM {/* Relativa ao tamanho da fonte do elemento pai, sendo 1 o valor total, 2 o dobro, 0.5 metade... (Padrão: 1em = 16px)*/}
+    _EX {/* Relativo ao tamanho da letra X Minuscula da fonte. */}
+    _VW {/* Porcentagem da largura da pagina. Redimenciona automaticamente. */}
+    _VH {/* Porcentagem da altura da pagina. Redimenciona automaticamente. */}
+    _%  {/* Representa o tamanho em porcentagem em relação a fonte do elemento pai, sendo 100% o completo da fonte atual. */}
+
+
+/** MELHOR UNIDADE DE MEDIDA ==========================================================================================================*/
+/*: Cada unidade de medida tem seu Prós e Contras, porem algumas unidades são mais adequadas do que outras. */
+
+
+
+/** IMPORTAR FONTES ===================================================================================================================*/
+/*: Alem das poucas opções que o CSS nos da de fontes podemos utilizar fontes externas a partir de servidores ou arquivos. */
+
+/*? FONTES DE SERVIDOR ----------------------------------------------------------------------------------------------------------------*/
+/*: São fontes que utilizamos a partir de um link de um site de fontes como por exemplo o Google Fonts. */
+
+/*TODO: SINTAXE */
+    @import url('');
+
+/*TODO: EXEMPLO */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+GOOGLE FONTS {/*https://fonts.google.com*/}
+
+/*? FONTES INSTALADAS -----------------------------------------------------------------------------------------------------------------*/
+/*: São fontes que baixamos e deixamos dentro do repositorio do nosso site para que possamos utilizalas. */
+
+/*TODO: SINTAXE */
+    @font-face {
+        font-family: 'NOME_FONTE'; /* Nome que será utilizadoo para chamar esta fonte. */
+        src: 
+            url('CAMINHO_FONTE')   /* Caminho do arquivo de fonte. */
+            format('TIPO_FONTE'),  /* Tipo de arquivo de fonte. */
+            ...                    /* Podemos repertir a 'URL' e 'FORMAT' para incluir mais arquivos de fonte. */
+        ;
+    }
+
+/*TODO: EXEMPLO */
+    @font-face {
+        font-family: 'Minha Fonte';
+        src: url('Fonte.ttf') format('truetype');
+    }
+
+    P{
+        font-family: 'Minha Fonte';
+    }
+
+/** FORMATOS DE FONTES ================================================================================================================*/
+/*: Quando utilizamos uma fonte instalada em nosso repositorio, devemos informar o tipo de arquivo de fonte utilizada */
+
+/*TODO: FORMATO */
+    _TRUETYPE {/* Arquivos TTF */}
+    _OPENTYPE {/* Arquivos OTF */}
+
+    _ENBEDDED-OPENTYPE {/* */}
+    _TRUETYPE-AAT      {/* Apple Advanced Typography */}
+    _SGV               {/* */}
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! ESPAÇAMENTOS */
+/*: Cada elemento HTML possui uma série de divisões que delimitarão cada pedaço do elemento. */
+/*   _________________________________________
+    | MARGIN _______________________________  |
+    |       | BORDER _____________________  | |
+    |       |       | PADDING __________  | | |
+    |       |       |        | ELEMENTO | | | |
+    |       |       |        |__________| | | |
+    |       |       |_____________________| | |
+    |       |_______________________________| |
+    |_________________________________________|
+*/
+    .MARGIN   {/* Espaçamento EXTERNO, serve para dar uma distancia entre outros elementos. */}
+    .BORDER   {/* Espaço ocupado pela borda, serve para delimitar o inicio do elemento. */}
+    .PADDING  {/* Espacamento INTERNO do elemento, serve para dar uma distancia da borda. */}
+    .ELEMENTO {/* O elemento em si. */}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 2            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+/*? SUB-SUMÁRIO */
+#CAPITULO_2 - FORMATAÇÕES BASICAS
+{
+    00 - DIMENCIONAMENTO
+    00 - FONTES
+    00 - BORDAS
+    00 - PLANO DE FUNDO
+    00 - PONTEIROS
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! FONTES */
+/** PRINCIPAIS PARAMETROS =============================================================================================================*/
+
+/*TODO: SINTAXE */
+    #PAREMETRO{
+        font: ;            /* SHORTHAND: Define o Estilo, Força, Tamanho e Fonte. */
+        font-family: ;     /* Informa a Fonte utilizada.  */
+        font-style: ;      /* Informa o Estilo da fonte.  */
+        font-weight: ;     /* Informa a Força da fonte.   */
+        font-size: ;       /* Informa o Tamanho da fonte. */
+
+        font-variant: ;    /* Informa se a fonte será exibida em Versatele. */
+    }
+
+/*? FONT [SHORTHAND] ------------------------------------------------------------------------------------------------------------------*/
+/*: Este parametro é utilizado para definir o Estilo, Força, Tamanho e Fonte em uma unica linha. */
+
+/*TODO: ORDEM */
+Opcionais, Sem ordem, Apenas 1 de cada.
+    .1 {/* FONT-STYLE   */}
+    .1 {/* FONT-WEIGHT  */}
+    .1 {/* FONT-VARIANT */}
+
+Obrigatórias e nesta ordem.
+    .2 {/* FONT-SIZE   */}
+    .3 {/* FONT-FAMILY */}
+
+/*TODO: EXEMPLO */
+    P{
+        font: italic bold 10px 'Arial', 'Sans-serif';
+        font: 10px 'Times';
+        font: small-caps 20px 'Roboto';
+    }
+
+/*? FONT-FAMILY -----------------------------------------------------------------------------------------------------------------------*/
+/*: Define a fonte utilizada naquele text. Definição mais bem detalhada na pagina x. */
+/*: As fontes são colocadas na ordem em que o navegador fará o teste de compatibilidade, caso incompativel passa para a proxima. */
+/*: Sempre devemos informar uma CATEGORIA DE FONTE generica como ultima para o caso de nenhuma fonte ser compativel. */
+
+/*TODO: EXEMPLO */
+    P{
+        font-family: 'Courier New', 'Courier', monospace;
+    }
+
+
+/*? FONT-STYLE ------------------------------------------------------------------------------------------------------------------------*/
+/*: Define o estilo da fonte entre Normal ou Italico. */
+
+/*TODO: VALORES */
+    _NORMAL {/* Fonte com formatação normal. */}
+    _ITALIC {/* Fonte com formatação em italico. */}
+
+
+/*? FONT-WEIGHT -----------------------------------------------------------------------------------------------------------------------*/
+/*: Define a força do negrito de uma fonte. A grande maioria das fontes não possui todas as variações de força. */
+
+/*TODO: VALORES */
+    _LIGHTER   {/* Mais fraca que a normal. */}
+    _NORMAL    {/* Fonte normal. */}
+    _BOLD      {/* Fonte em negrito. */}
+    _BOLDER    {/* Mais forte que o negrito. */}
+
+    100 a 900 {/* Varia a força da fonte entre THIN(100) e EXTRA-BOLD(900)*/}
+
+
+/*? FONT-VARIANT ----------------------------------------------------------------------------------------------------------------------*/
+/*: Informa se a fonte estará em Versatela. 
+/*: É um estilo de fonte em que todas as letras minusculas são convertidas para letras maiusculas porem com um tamanho reduzido. */
+
+/*TODO: VALORES */
+    _NORMAL     {/* Fonte sem a utilização do versatela. */}
+    _SMALL-CAPS {/* Fonte utilizando o versatela. */}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! BORDAS */
+/** INFORMANDO AS BORDAS ==============================================================================================================*/
+/*: Em alguns parametros podemos ser mais especificos e informar a qual borda estamos nos referindo. */
+/*: Dependendo da quantidade de valores que nos informemos, ele acessará um determinado lado da borda. */
+
+    .UM     {border-width: 10px;}                /* Superior, Direita, Inferior, Esquerda.    */
+    .DOIS   {border-width: 10px 15px;}           /* Superior e Inferior - Direita e Esquerda. */
+    .TRES   {border-width: 10px 15px 20px;}      /* Superior - Direita e Esquerda - Inferior. */
+    .QUATRO {border-width: 10px 15px 20px 30px;} /* Superior - Direita - Inferior - Esquerda  */
+
+/** PRINCIPAIS PARAMETROS =============================================================================================================*/
+
+/*TODO: PARAMETROS */
+    #BORDAS{
+        border: ;        /* SHORTHAND: Define a Largura, Estilo e Cor. */      
+        border-width: ;  /* Informa a Largura da borda. */
+        border-style: ;  /* Informa o Estilo da borda.  */
+        border-color: ;  /* Informa a cor da borda.     */
+
+        border-radius: ; /* Informa o aredondamento da borda. */
+    }
+
+/*? BORDER [SHORTHAND] ----------------------------------------------------------------------------------------------------------------*/
+/*: Este parametro é utilizado para definir a Largura, Estilo e Cor em uma unica linha. */
+
+/*TODO: ORDEM */
+Opcional e sem ordem.
+    .1 {/* TAMANHO */}
+    .1 {/* COR     */}
+
+Obrigatorio e sem ordem.
+    .1 {/* ESTILO  */}
+
+
+/*TODO: EXEMPLO */
+    P{
+        border: 10px solid red;
+        border: dotted;
+        border: blue dashed;
+    }
+
+
+/*? BORDER-WIDTH ----------------------------------------------------------------------------------------------------------------------*/
+/*: Define o tamanho da borda em relação a sua Largura. Podemos informar as bordas de 4 formas diferentes. */
+
+/*TODO: VALORES */
+    _THIN   {/* Borda Fina.   */}
+    _MEDIUM {/* Borda Média.  */}
+    _THICK  {/* Borda Grossa. */}
+
+    .ESPECIFICA {/* Especifica o tamanho exato de cada borda. */
+        border-width: 10px 15px 20px 30px;
+    }
+
+
+/*? BORDER-STYLE ----------------------------------------------------------------------------------------------------------------------*/
+/*: Define qual será o estilo da borda. */
+
+/*TODO: VALORES*/
+    _DOTTED {/* Borda Pontilhada.              */}
+    _DASHED {/* Borda Tracejada.               */}
+    _SOLID  {/* Borda Solida.                  */}
+    _DOUBLE {/* Borda Duplicada.               */}
+    _GROOVE {/* Borda 3D para Dentro.          */}
+    _RIDGE  {/* Borda 3D para Fora.            */}
+    _INSER  {/* Borda 3D Superior para Dentro. */}
+    _OUTSET {/* Borda 3D Superior para Fora.   */}
+    _NONE   {/* Nenhuma Borda.                 */}
+    _HIDDEN {/* Borda Invisivel.               */}
+
+    .MIXADA {/* Combinação de 2-4 tipos de borda. */
+        border-style: dashed dashed solid double;
+    }
+
+
+/*? BORDER-COLOR ----------------------------------------------------------------------------------------------------------------------*/
+/*: Define a cor que será aplicada nas 4 bordas. */
+/*: Caso a cor não seja definida, ele herdará a cor do proprio elemento. */
+
+/*TODO: EXEMPLO */
+    P{/* Determina a cor de cada lado na borda.  */
+        border-color: red green yellow blue;
+    }
+
+
+/*? BORDER-RADIUS ---------------------------------------------------------------------------------------------------------------------*/
+/*: Define o arredondamento das quinas das bordas. */
+
+/*TODO: EXEMPLO */
+    P{/* Definimos o tamanho do arredondamento. */
+        border-radius: 10px;
+    }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! MARGEM */
+/*: As propriedades de margem permitem alterar o espaço da fora de um elemento. */
+
+/** INFORMANDO AS MARGENS =============================================================================================================*/
+/*: Em alguns parametros podemos ser mais especificos e informar a qual borda estamos nos referindo. */
+/*: Dependendo da quantidade de valore que nos informemos, ele acessará um determinado lado da borda. */
+
+    .UM     {margin: 10px;}                /* Superior, Direita, Inferior, Esquerda.    */
+    .DOIS   {margin: 10px 15px;}           /* Superior e Inferior - Direita e Esquerda. */
+    .TRES   {margin: 10px 15px 20px;}      /* Superior - Direita e Esquerda - Inferior. */
+    .QUATRO {margin: 10px 15px 20px 30px;} /* Superior - Direita - Inferior - Esquerda  */
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! TEXTOS */
+/** PRINCIPAIS PARAMETROS =============================================================================================================*/
+
+/*TODO: PARAMETROS */
+    #TEXTOS{
+        text-align: ;
+        text-indent: ;
+        text-decoration: ;
+    }
+
+/*? TEXT-ALIGN ------------------------------------------------------------------------------------------------------------------------*/
+/*: Define o alinhamento do texto. */
+
+/*TODO: VALORES */
+    _LEFT    {/* Alinhado a Esquerda.*/}
+    _RIGHT   {/* Alinhado a Direita. */}
+    _CENTER  {/* Alinhado no Centro. */}
+    _JUSTIFY {/* Texto Justificado.  */}
+
+/*? TEXT-INDENT -----------------------------------------------------------------------------------------------------------------------*/
+/*: Define a identação do texto (Primeiro espaçamento de um novo Paragrafo. ). */
+
+/*TODO: EXEMPLO */
+    P{
+        text-indent: 20px;
+    }
+
+/*? TEXT-DECORATION -------------------------------------------------------------------------------------------------------------------*/
+/*: Define a decoração da fonte. A grande maioria das fontes possui compatibilidade apenas com os quatro primeiros valores. */
+
+/*TODO: VALORES */
+    _NONE         {/* Sem decoração alguma. */}
+    _UNDERLINE    {/* Texto Sublinhado. */}
+    _LINE-THROUGH {/* Texto Riscado. */}
+    _OVERLINE     {/* Texto Sublinhado em cima. */}
+
+    _WAVY   {/*  */}
+    _SOLID  {/*  */}
+    _DASHED {/*  */}
+    _DOTTED {/*  */}
+    _DOUBLE {/*  */}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! PLANO DE FUNDO */
+
+/** BACKGROUND ========================================================================================================================*/
+/*: Esta Propriedade é utilizada para alterar o fundo de qualquer elemento, seja alterando a cor, imagem, posição, etc... */
+
+/** PRINCIPAIS PARAMETROS =============================================================================================================*/
+/*: Estes são os principais parametros utilizados para estilizar o fundo de um componente. */
+
+/*TODO: SINTAXE */
+    #PARAMETROS{
+        background-color: ;      /* Especifica a cor de fundo de um elemento. */
+        background-image: ;      /* Especifica uma imagem ou degrade para um elemento. */
+        background-repeat: ;
+        background-attachment: ;
+        background-position: ;
+    }
+
+/*? BACKGROUND-COLOR ------------------------------------------------------------------------------------------------------------------*/
+/*: Define a cor do fundo de algum elemento. */
+
+/*TODO: EXEMPLO*/
+    H1{ background-color: blue;}
+
+/*? BACKGROUND-IMAGE ------------------------------------------------------------------------------------------------------------------*/
+/*: Define uma imgem para algum elemento. */
+    
+/*TODO: SINTAXE*/
+    _URL() {/* Imagem de Fundo. Informamos o caminho do arquivo de uma imagem. */}
+
+    _LINEAR-GRADIENT() {/* Degrade Reto.*/}
+        + Grau de Inclinação  {/* Grau de inclinação sobre o degrade ( "Valor" + deg ). */}
+        + Cor 1               {/* Primeira cor utilizada. */}
+        + Pordentagem da tela {/* OPCIONAL. Porcentagem da tela que aquela cor ocupará antes de iniciar o degrade. */}
+        + Cor 2               {/* Segunda cor utilizada.  */}
+        + Porcentagem da tela {/* OPCIONAL. Porcentagem da tela que aquela cor ocupará antes de iniciar o degrade. */}
+        + ...                 {/* Repita com mais cores e porcentagens para um degrade maior. */}
+        .EXEMPLO {background-image: linear-gradient(45deg blue 10% red);}
+
+    -RADIAL-GRADIENT() {/* Degrade com formato. */}
+        + Formato do Degrade  {/* Formato utilizado no degrade (Circle, ...). */}
+        + Cor 1               {/* Primeira cor utilizada. */}
+        + Pordentagem da tela {/* OPCIONAL. Porcentagem da tela que aquela cor ocupará antes de iniciar o degrade. */}
+        + Cor 2               {/* Segunda cor utilizada.  */}
+        + Porcentagem da tela {/* OPCIONAL. Porcentagem da tela que aquela cor ocupará antes de iniciar o degrade. */}
+        + ...                 {/* Repita com mais cores e porcentagens para um degrade maior. */}
+        .EXEMPLO {background-image: radial-gradient()}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|00|
+/*! PONTEIROS */
+/*: Alterar o tipo de ponteiro do mouse em um determinado componentes. */
+
+/*TODO: SINTAXE */
+    #PARAMETRO{ 
+        cursor: ;
+    }
+
+/*TODO: VALORES */
+    _DEFAULT   {/* Cursor Padrão de Seta.                    */}
+    _POINTER   {/* Cursor de Clique.                         */}
+    _TEXT      {/* Cursor de Seleção e Edição de Texto.      */}
+    _WAIT      {/* Cursor de Espera/Carregamneto.            */}
+    _MOVE      {/* Cursor para Mover Algo.                   */}
+    _CROSSHAIR {/* Cursor de Cruz, para alta precisão.       */}
+    _ZOOM      {/* Cursor de lupa para dar Zoom.             */}
+    _RESIZE    {/* Cursor para redimencionar algum elemento. */}
+
+    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 3            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+/*? SUB-SUMÁRIO */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 4            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+/*? SUB-SUMÁRIO */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|            CAPITULO 5            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+/*? SUB-SUMÁRIO */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+/*--|*********************************************************************************************************************************|--|             RASCUNHOS            |--*/
+/*--|*********************************************************************************************************************************|--|**********************************|--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

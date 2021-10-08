@@ -1,0 +1,341 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! PSICOLOGIA DAS CORES */
+/*: As cores tem um poder sobre o subconciente humano em que cada cor pode desempenhar uma certa emoção. */
+
+EMOÇÕES
+{
+    /* VERMELHO */ color: red;
+    /*
+        ASSOCIADA A: Amor, Emoção, Energia, Raiva, Perigo.
+        USAR EM....: Comida, Moda, Entretenimento, Serviços de Emergencia e Saude.
+        EVITAR EM..: Luxo, Natureza, Serviços em Geral.
+    */
+
+    /* AMARELO */ color: yellow;
+    /*
+        ASSOCIADA A: Felicidade, Alegria, Otimismo, Covardia.
+        USAR EM....: Dar Luz, Dar Calma e Felicidade, Chamar Atenção.
+        EVITAR EM..: Pode indicar que é algo Barato ou Spam.
+    */
+
+    /* LARANJA */ color: orange;
+    /*
+        ASSOCIADA A: Divertimento, Ambição, Calor, Cautela.
+        USAR EM....: Comércio eletronico, Entretrnimento, Call-to-Action.
+        EVITAR EM..: Pode se tornar cansativo se muito explorado.
+    */
+
+    /* VERDE */ color: green;
+    /*
+        ASSOCIADA A: Saúde, Natureza, Dinheiro, Sorte, Inveja.
+        USAR EM....: Relacionamentos, Turismo, Financeiros, Meio Ambiente.
+        EVITAR EM..: Luxo, Tecnologia, Meninas Adolescentes.
+    */
+
+    /* AZUL */ color: blue;
+    /*
+        ASSOCIADA A: Competencia, Sabedoria, Calma, Frio.
+        USAR EM....: Tecnologia, Medicina, Ciencias, Governo.
+        EVITAR EM..: Comida (Reduz o Apetite).
+    */
+
+    /* ROXO */ color: purple;
+    /*
+        ASSOCIADA A: Criatividade, Poder, Sabedoria, Misterio.
+        USAR EM....: Produtos de Beleza, Astrologia, Ioga, Espiritualizadade, Adolescente.
+        EVITAR EM..: Não prende muito a atenção, Indiferente.
+    */
+
+    /* MARROM */ color: brown;
+    /*
+        ASSOCIADA A: Terra, Robustez, Estabilidade, Amizade.
+        USAR EM....: Alimentação, Imobiliaria, Animais, Finanças.
+        EVITAR EM..: Cor considerada conservadora.
+    */
+
+    /* PRETO */ color: black;
+    /*
+        ASSOCIADA A: Elegancia, Autoridade, Mistério, Morte.
+        USAR EM....: Luxo, Moda, Marketing, Cosmeticos.
+        EVITAR EM..: Desconforto e Medo.
+    */
+
+    /* BRANCO */ color: white;
+    /*
+        ASSOCIADA A: Pureza, Limpeza, Felicidade, Segurança.
+        USAR EM....: Medicina, Saúde, Tecnologia, Luxo (Com Preto, Ouro, Cinza).
+        EVITAR EM..: Não chama a atenção, deve ser combinado.
+    */
+
+    /* CINZA */ color: gray;
+    /*
+        ASSOCIADA A: Formalidade, Sofisticação, Frieza, Indiferença.
+        USAR EM....: Bens de luxo, Efeito Calmante.
+        EVITAR EM..: Dá a sensação de frieza.
+    */
+
+    /* ROZA */ color: pink;
+    /*
+        ASSOCIADA A: Amor, Romance, Sinceridade, Cuidados.
+        USAR EM....: Produtos Femininos e Cosmeticos.
+        EVITAR EM..: Pode tornar muito sentimental e doce.
+    */
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! CONTRASTE FUNDO VS FONTE */
+/*: É importante resaltar quais cores na fonte combinam com seu fundo. */
+/*: [COR_FUNDO - COR_FONTE] */
+
+    /*
+    BRANCO{PRETO} /*: Combinação basica para qualquer site, utilize quando houver muitos textos. /
+    PRETO{BRANCO} /*: Combinação que cansa a vista, utilize o minimo posivel. /
+    */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! HARMONIA DE CORES */
+/*: Estuda a forma em que as cores podem combinar entre si.*/
+/*? Veja as imagens na pasta "Harmonia de Cores" neste diretorio. */
+
+/** ACHANDO ALGO BONITO */
+BELEZA
+{/* 
+    Se voçê achar algo bonito bem provavelmente aquela coisa atendeu a dois requisitos:
+        + Simetria.
+        + Cor.
+*/}
+
+/** PRINCIPAIS CORES*/
+NOMES /*? Imagem: (Nome_Das_Cores) e (Discos_Cromaticos_1) */
+{/*
+    Cores Primarias (Cores que servem de base para todas as outras).
+        + Amarelo
+        + Azul
+        + Vermelho
+
+    Cores Secundarias (Junção entre as cores Primarias).
+        + Verde        (Azul + Amarelo)
+        + Laranja      (Amarelo + Vermelho)
+        + Roxo/Violeta (Azul + Vermelho)
+
+    Cores Terciarias (Junção entre as cores Primarias e Secundarias, Nomeamos: Cor_Primaria + Cor_Secundaria)
+        + Amarelo-Alaranjado  (Amarelo + Laranja)
+        + Vermelho-Alaranjado (Vermelho + Laranja)
+        + Vermelho-Aroxeado   (Vermelho + Roxo)
+        + Azul-Aroxeado       (Azul + Roxo)
+        + Azul-Esverdeado     (Azul + Verde)
+        + Amarelo-Esverdeado  (Amarelo + Verde)
+*/}
+
+/** PALETA DE CORES*/
+PALETA
+{/*
+    Uma paleta de cores é um conjunto de cores que será utilizada em todo o site ou aplicação.
+        + Deve ser definida no inicio do projeto.
+        + Deve posuir entre 3 a 5 cores no maximo, recomenda-se 4 cores.
+        + Desconsidere Preto e Branco, estas cores serão utilizadas em todos os projetos.
+        + Verifique a logo do cliente e utilize sua cor primaria em sua paleta.
+*/}
+
+/** DISCOS CROMATICOS*/
+DC /*? Imagem: (Discos_Cromaticos_1) e (Discos_Cromaticos_2)*/
+{/*
+    [1]: Discos_Cromaticos_1
+    [2]: Discos_Cromaticos_2
+
+    CORES COMPLEMENTARES - [1]
+        + Propriedade: Duas cores com extremo contraste entre si.
+        + Identificar: Escolha uma cor e identifique qual é a cor imediatamente oposta a esta no disco.
+        + Quantidade; 2 Cores.
+
+    CORES ANALOGAS - [1]
+        + Propriedade: São as cores com grande harmonia entre si e de pouco contraste.
+        + Identificar: Escolha uma cor e identifique as cores vizinhas a ela no disco.
+        + Quantidade: 3+ Cores.
+
+    CORES ANALOGAS COMPLEMENTARES - [2]
+        + Propriedade: Cores harmonicas com uma cor de extremo contraste.
+        + Identificar: Escolha uma cor base, identifique a cor oposta e tambem as cores vizinhas à sua cor base.
+        + Quantidade: 4+ Cores.
+
+    CORES ANALOGAS RELACIONADAS - [2]
+        + Propriedade: Duas cores harmonicas com uma que contrasta levemente mas tambem combina.
+        + Identificar: Escolha um cor base, pule uma cor para o lado e escolha as proximas 2 cores.
+        + Quantidade: 3+ Cores.
+
+    CORES INTERCALADAS - [2]
+        + Propriedade: Cores harmonicas com leve contraste entre si, porem mais "Duras".
+        + Identificar: Escolha uma cor base e escolha as proximas cores pulando uma cor para o lado.
+        + Quantidade: 2+ Cores.
+
+    CORES EM TRIADE - [1]
+        + Propriedade: 3 Cores completamente simetricas entre si. Cores com bastante contraste entre si.
+        + Identificar: Escolha um cor base e escolha as outras duas formando um triangulo equilaterio.
+        + Quantidade: 3 Cores.
+
+    CORES EM QUADRADO - [1]
+        + Propriedade: 4 Cores que combinão (Pri, Sec, Ter). Cores fortes e bem Balanceadas com contraste razoavel.
+        + Identificar: Escolha uma cor base e escolha outras 3 em forma de quadrado.
+        + Quantidade: 4 Cores.
+
+    CORES TETRAÉDRICAS - [1]
+        + Propriedade: Dois pares de cores com bastante contraste entre si.
+        + Identificar: Escolha duas cores bases e localize as cores complementares de ambas, formando um retangulo.
+        + Quantidade: 4 Cores.
+
+    CORES MONOCROMATICAS - [2]
+        + Propriedade: Uma unica cor com tonalidades diferentes, formando uma paleta extremamente harmonica entre si.
+        + Identificar: Escolha apenas uma cor e diminua sua saturação e seu Brilho.
+        + Quantidade: 2+ Cores.
+*/}
+
+TEMPERATURA DE CORES /*? Imagem: Temperatura */
+{/*
+    Se dividirmos o disco cromatico em dois poderemos ver uma clara distinção de tonalidades Quentes e Frias.
+    OBS: Divida o disco entre (Amarelo-Esverdeado e Amarelo) e (Violeta e Vermelho-Aroxeado).
+
+    Cores Frias: Azul, Verde, Violeta, Azul-Esverdeado, Azul-Aroxeado, Amarelo-Esverdeado.
+    Cores Quentes: Vermelho, Amarelo, Laranja, Vermelho-Aroxeado, Vermelho-Alaranjado, Amarelo-Alaranjado.
+
+    + Utilize as cores frias para representar algo frio.
+    + Utilize as cores Quentes para representar algo quente.
+    + Cada lado de cor cria uma certa harmonia monocromatica entre elas
+*/}
+
+CIRCULO CROMATICO
+{/* 
+    + Representação das mais de 65 milhoes de cores posiveis em um disco circular. 
+    + Utilizado para 
+*/}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! PROPRIEDADES ESPECIAIS */
+/*: Estas são as propriedades mais peculiares do CSS. */
+
+SELETOR
+{
+
+/** DEGRADE -----------------------------------------------------------------------------------------------------*/
+/*  PROPRIEDADE: background-image.
+    VALOR: 
+            linear-gradient(Angulo, Cor1 Porcentual, Cor2 ...);
+                + Angulo: Angulo de inclinação do gradiente na tela (Angulo + "deg")
+                + Cor1: Primeira cor do degrade.
+                + Cor2: Segunda cor do degrade.
+                + Porcentual: Porcentagem da tela ocupada por determinada cor (Opcional). 
+                
+            radial-gradient(Formato, Cor1 Porcentual, Cor2 ...);
+                + Formato: Forma ao qual aquele gradiente se adequara (Circle, ...)
+                + Cor1: Primeira cor do degrade.
+                + Cor2: Segunda cor do degrade.
+                + Porcentual: Porcentagem da tela ocupada por determinada cor (Opcional). 
+*/
+    background-image: linear-gradient(30deg, #49ff01 10%, #01d9ff);
+    background-image: radial-gradient(circle, red, orange 50%);
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! DEGRADES EM CSS */
+/*:  */
+
+/** PROPRIEDADE */
+>>>|Sintaxe: Seletor{ background-image: Valor; color: white}
+
+/** TIPO DE DEGRADE */
+/*: Em CSS Podemos definir um degrade de diversas formas. */
+
+/*? Linear/Reto */
+SELETOR
+{/*
+    Podemos definir um Gradiente Linear com duas ou mais cores.
+        + ANGULO: (Angulo + "deg":  90deg) ou (to + Direção: to left)
+        + Cor1, Cor2: Definimos as cores do gradiente, quantas quisermos
+
+*/    
+    /* SINTAXE: */ background-image: linear-gradient(ANGULO, COR_1, cOR_2);
+
+    /* EXEMPLO 1: */ background-image: linear-gradient(30deg, #5631fa, #fd119b);
+    /* EXEMPLO 2: */ background-image: linear-gradient(TO TOP, #008000 30%, #0000ff, #ffff00);
+}
+
+/*? Radial/Redondo */
+SELETOR
+{/*
+    Podemos definir um Gradiente Linear com duas ou mais cores.
+        + ANGULO: (Angulo + "deg":  90deg) ou (to + Direção: to left)
+        + Cor1, Cor2: Definimos as cores do gradiente, quantas quisermos
+
+*/    
+    /* SINTAXE: */ background-image: radial-gradient(circle);
+
+    /* EXEMPLO 1: */ background-image: radial-gradient(circle, #5631fa, #fd119b);
+    /* EXEMPLO 2: */ background-image: radial-gradient(TO TOP, #008000, #0000ff, #ffff00);
+}
+
+
+|Sintaxe: Seletor{ ha}
+
+>>>|Exemplo: body{ Ba}
+
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 1 +
+/*! PARAMETROS BASICOS */
+/*: Os parametros mais comuns utilizados na maioria dos componentes */
+
+SELETOR{
+
+    text-align: ; /* Alinhamento do Texto */
+
+    margin: ; /* Espaçamento entre o componentes */
+
+    text-shadow: ; /* Sombra de um Texto */
+    box-shadow: ; /* Sombra de uma Caixa */
+}
+
+
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
+/*--|********************************************************************************************************************************************--**************************|--*/
+
++~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+~~~+ /** BODY */
+BODY
+{
+    background-color: #0051ff; /*: Cor de Fundo da Pagina. */
+    color: #fff8dc;            /*: Cor da Fonte de Toda a Pagina. */
+}
+
++~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+ /** H1 - H6 */
+H1 
+{
+
+}
+
+P
+{
+    text-align: justify;                            /*: Alinhamento. */
+    font-family: 'Courier New', Courier, monospace; /*: Fonte. */
+    font-size: large;                               /*: Tamanho da Fonte. */
+}
+
+a{
+    /*
+        :LINK    - Link sem estar visitado.
+        :VISITED - Link visitado.
+        :ACTIVE  - Momento em que o link é clicado.
+        :HOVER   - Quando o mouse passa por cima do link.
+    */
+
+
+    text-decoration: none;
+    height: ;
+}
