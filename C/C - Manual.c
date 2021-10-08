@@ -2,6 +2,10 @@
 // Data de Inicio....: 10/08/2021
 // Guia de Linguagem.: C
 
+// É altamente recomendavel que utilize o Visual Studio Code como editor de coódigo.
+// Tambem utilize a extenção "Better Comments" de "Aaron Bold" para poder visualizar melhor.
+// Este manual esta em constante aprimoramento e não esta completo.
+
 //? SUMÁRIO GERAL
 ------------------------------------------
 CAPITULO 1 - INTRODUÇÃO A LINGUAGEM
@@ -45,7 +49,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
 //! BIBLIOTECAS
-//: Bibliotecas são ferramentas que contem funções pré-definidas pelo sistema ou usuário.
+//: Bibliotecas são ferramentas que contem funções pré-definidas pelo sistema.
 
 //TODO: SINTAXE
     #include <NOME_BIBLIOTECA.h>
