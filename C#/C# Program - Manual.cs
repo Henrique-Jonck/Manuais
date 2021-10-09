@@ -1,3 +1,11 @@
+//-| Autor.............: Henrique Campos Jonck - 17 Anos                                 |-//
+//-| Data de Inicio....: 01/06/2021                                                      |-//
+//-| Guia de Linguagem.: CSHARP                                                          |-//
+//-----------------------------------------------------------------------------------------//
+//-| Este guia foi criado com o intuito de estudos e anotações.                          |-//
+//-| Escrito no editor de código Visual Studio Code.                                     |-//
+//-| Altamente recomendavel que se utilize a extensão "Better Comments" de "Aaron Bond". |-//
+
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 //? DEFINIÇÃO DE TERMOS.
 

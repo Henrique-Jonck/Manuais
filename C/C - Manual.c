@@ -1,10 +1,34 @@
-// Autor.............: Henrique Campos Jonck - 17 Anos
-// Data de Inicio....: 10/08/2021
-// Guia de Linguagem.: C
+//-| Autor.............: Henrique Campos Jonck - 17 Anos                                 |-//
+//-| Data de Inicio....: 10/08/2021                                                      |-//
+//-| Guia de Linguagem.: C                                                               |-//
+//-----------------------------------------------------------------------------------------//
+//-| Este guia foi criado com o intuito de estudos e anotações.                          |-//
+//-| Escrito no editor de código Visual Studio Code.                                     |-//
+//-| Altamente recomendavel que se utilize a extensão "Better Comments" de "Aaron Bond". |-//
 
-// É altamente recomendavel que utilize o Visual Studio Code como editor de coódigo.
-// Tambem utilize a extenção "Better Comments" de "Aaron Bold" para poder visualizar melhor.
-// Este manual esta em constante aprimoramento e não esta completo.
+
+//-| INSTRUÇÕES PARA UTILIZAÇÃO |-//
+=====================================================================================================================================|PG|
+//! TITULO DA PAGINA !\\
+//: Descrição da pagina.
+
+//* SUB-TITULO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Descrição do sub-titulo.
+
+//? SUB-SUBTITULO ----------------------------------------------------------------------------------------------------------------------|
+//: Descrição do sub-subtitulo.
+
+//TODO: SINTAXE
+    Sintaxe dos Comandos  // Comentario a respeito da Sintaxe.
+
+//TODO: EXEMPLO
+    Exemplo dos Comandos  // Comentario a respeito do Exemplo.
+
+//TODO: INSTRUÇÕES
+    Informação Complementar
+
+
+========================================================================================================================================|
 
 //? SUMÁRIO GERAL
 ------------------------------------------
@@ -14,7 +38,7 @@ CAPITULO 1 - INTRODUÇÃO A LINGUAGEM
 0.INTRODUCAO
 
 ------------------------------------------
-CAPITULO 2 - CONTEUDO BASICO
+CAPITULO 2 - CONTEÚDO BASICO
 
 0. BIBLIOTECAS
 0. VARIAVEIS
@@ -34,7 +58,7 @@ CAPITULO 4 - FERRAMENTAS BASICAS
 0. MASCARAS DE FORMATAÇÃO
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
@@ -47,47 +71,66 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 0. ARRAY/VETOR
 0. MATRIZ
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! BIBLIOTECAS
 //: Bibliotecas são ferramentas que contem funções pré-definidas pelo sistema.
+
+//* ADICIONANDO UMA BIBLIOTECA +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Para utilizarmos as funções contidas em uma biblioteca primeiro precisamos inclui-la.
 
 //TODO: SINTAXE
     #include <NOME_BIBLIOTECA.h>
 
-//* PRINCIPAIS BIBLIOTECAS -------------------------------------------------------------------------------------------------------------|   
+//TODO: EXEMPLO
+    #include <stdio.h>
+
+
+//? PRINCIPAIS BIBLIOTECAS -------------------------------------------------------------------------------------------------------------|   
     #include <stdio.h>   //: Manipulação de entrada e saida do usuário.
     #include <stdlib.h>  //:
     #include <stdbool.h> //: Adiciona o tipo de variavel "bool".
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! VARIAVEIS
 //: Variaveis são espaços na memoria onde podemos armazenar uma série de informações.
 //: Variaveis possuem diversos "Tipos" em que cada tipo de variavel armazena uma categoria de itens diferentes.
 
-//* CRIANDO UMA VARIAVEL ---------------------------------------------------------------------------------------------------------------|
+//* CRIANDO UMA VARIAVEL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
     TIPO NOME_VARIAVEL;
 
 //TODO: EXEMPLO
-    char C;          //: Apenas criando uma variavel.
-    int Numero = 17; //: Criando e ja definindo seu valor.
-    int N1, N2, N3;  //: Criando varias variaveis do mesmo tipo.
+    char C;           // Apenas criando uma variavel.
+    int Numero = 17;  // Criando e ja definindo seu valor.
+    int N1, N2, N3;   // Criando varias variaveis do mesmo tipo.
 
-//* TIPOS DE VARIAVEIS -----------------------------------------------------------------------------------------------------------------|
-    
+
+//? TIPOS DE VARIAVEIS -----------------------------------------------------------------------------------------------------------------|   
     char   //: Carcacteres Unicos, deve estar entre aspas.  | 'A', 'B', 'c'
     int    //: Numeros Inteiros, utiliza-se apenas numeros. | 10, 2021, -15
     float  //: Numeros Reais, casas decimais com [.].       | 3.14, -17.4950, 8.5
     double //:
     void   //: Sem Valor
 
+=====================================================================================================================================|99|
+//! CONSTANTES
+//: Constantes são como variaveis, porem depois que seu valor é definido ele não poderá ser alterado.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+//* CRIANDO UMA CONSTANTE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Constantes devem ser criadas fora do escopo do MAIN.
+
+//TODO: SINTAXE
+    #define NOME_CONSTANTE VALOR;
+
+//TODO: EXEMPLO
+    #define PI 3.14;
+
+=====================================================================================================================================|99|
 //! ARRAY/VETOR
 //: Arrays são como super variaveis em que podemos armazenar multiplos valores dentro dele.
 
-//* CRIANDO UM ARRAY -------------------------------------------------------------------------------------------------------------------|
+//* CRIANDO UM ARRAY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Definimos um Vetor decidindo sua quantidade maxima de itens e seu tipo que será aplicado para todos os itens do Array. 
 
 //TODO: SINTAXE
@@ -96,32 +139,34 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //TODO: EXEMPLO
     int Ano[8];
 
-//* CHAMANDO UM ARRAY ------------------------------------------------------------------------------------------------------------------|
+
+//* CHAMANDO UM ARRAY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Quando chamarmos um Array buscamos um item pelo seu indice que SEMPRE inicia em 0.
 
 //TODO: SINTAXE
     NOME_ARRAY[INDICE];
 
 //TODO: EXEMPLO
-    Ano[0] = 2021; //: Primeiro item do Array.
-    Ano[7] = 1750; //: Ultimo item do Array.
+    Ano[0] = 2021;  // Primeiro item do Array.
+    Ano[7] = 1750;  // Ultimo item do Array.
     int Ano_Atual = Ano[0];
 
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! MATRIZ
 //: Matrizes são como Arrays (Pg: x) porem com itens contidos em Linhas e Colunas.
 
-//* CRIANDO UMA MATRIZ -----------------------------------------------------------------------------------------------------------------|
-//: Qundo criamos uma Matriz informamos o tamanho maximo de linhas e tambem o tamanho maximo de colunas.
+//* CRIANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Qundo criamos uma Matriz informamos o numero maximo de linhas e tambem o numero maximo de colunas.
 
 //TODO: SINTAXE
-    TIPO NOME_MATRIZ[TAMANHO_LINHAS][TAMANHO_COLUNAS];
+    TIPO NOME_MATRIZ[NUMERO_LINHAS][NUMERO_COLUNAS];
 
 //TODO: EXEMPLO
-    int Tabela[3][4]; //: Cria uma Matriz de 3 Linhas e 4 Colunas.
+    int Tabela[3][4]; // Cria uma Matriz de 3 Linhas e 4 Colunas.
 
-//* CHAMANDO UMA MATRIZ ----------------------------------------------------------------------------------------------------------------|
+
+//* CHAMANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Quando chamarmos uma Matriz buscamos um item pelo seu indice que SEMPRE inicia em 0.
 
 //TODO: SINTAXE
     NOME_MATRIZ[LINHA][COLUNA];
@@ -132,12 +177,13 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     int Centena = Tabela[1][4];
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! FUNÇÕES
-//: Funções são blocos de códigos nomaedos que podemos executar quantas vezes quisermos apenas chamando pelo seu nome.
+//: Funções são blocos de códigos nomeados que podemos executar quantas vezes quisermos apenas chamando pelo seu nome.
 //: Tambem podemos informar PARAMETROS para informar 
 
-//* CRIANDO A FUNÇÃO ===================================================================================================================|
+//* CRIANDO A FUNÇÃO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+
 //TODO: INSTRUÇÕES
     1 // Funções devem ser criadas fora do escopo da MAIN ou em outros arquivos.
     2 // PARAMETROS e RETURNOS são opçionais.
@@ -156,7 +202,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 
 //? PARAMETROS -------------------------------------------------------------------------------------------------------------------------|
-//: Parametros são Informações/Valores externo que passamos para uma função para que ela possa utilizar internamente.
+//: Parametros são Informações/Valores externos que passamos para uma função para que ela possa utilizar internamente.
 
 //TODO: EXEMPLO
     void Sua_Idade(int idade)
@@ -166,7 +212,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 
 //? RETORNOS ---------------------------------------------------------------------------------------------------------------------------|
-//: Retornos são valores que a função ira enviar de volta para o mesmo local de onde a função foi chamada.
+//: Retornos são valores que uma função irá enviar de volta para o mesmo local de onde esta função foi chamada.
 //: Se não quisermos retornar nada, utilizamos a palavra reservada "void", se não, informamos o tipo do valor que será retornado.
 
 //TODO: EXEMPLO
@@ -177,7 +223,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     }
 
 
-//* CHAMANDO A FUNÇÃO ==================================================================================================================|
+//* CHAMANDO A FUNÇÃO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Quando quisermos executar uma função apenas chamamos o seu nome e informamos os Parametros caso necessario.
 
 //TODO: SINTAXE
@@ -186,19 +232,19 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //TODO: EXEMPLO
     int main()
     {
-        Meu_Nome();    //Imprime na tela: "Henrique Campos Jonck".
-        Sua_Idade(17); //Imprime na tela: "Sua idade: 17".
+        Meu_Nome();              // Imprime na tela: "Henrique Campos Jonck".
+        Sua_Idade(17);           // Imprime na tela: "Sua idade: 17".
 
-        int res = Somar(10, 20); //Retorna para "res" = 30.
+        int res = Somar(10, 20); // Retorna para "res" = 30.
         printf("%d", res);
     }
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! PONTEIROS
 //: Ponteiros são utilizados para manipular arquivos de Texto ou Binarios. Com eles Escrevemos e Lemos nestes arquivos.
 
-//* CRIANDO O PONTEIRO =================================================================================================================|
+//* CRIANDO O PONTEIRO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
     FILE *NOME_PONTEIRO;
@@ -206,8 +252,8 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //TODO: EXEMPLO
     FILE *jogadores;
 
-//* ABRINDO O PONTEIRO =================================================================================================================|
-//: Para abrir um ponteiro informamos o nome do Ponteiroe o nome do arquivo que será criado ou acessado(Informe o caminho do arquivo).
+//* ABRINDO O PONTEIRO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Para abrir um ponteiro informamos o nome do Ponteiro e o nome do arquivo que será criado ou acessado(Informe o caminho do arquivo).
 //: Tambem informamos o modo de manipulação (Leitura, Escrita, Anexagem).
 
 //TODO: SINTAXE
@@ -216,8 +262,8 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //TODO: EXEMPLO
     jogadores = fopen("Brasil", "w"); // Criará um arquivo (Brasil.txt) no ponteiro "jogadores" e informa que será no modo de escrita.
 
-//? MODOS ------------------------------------------------------------------------------------------------------------------------------|
 
+//? MODOS ------------------------------------------------------------------------------------------------------------------------------|
     R  // Abre um arquivo de TEXTO para leitura.
     W  // Abre um arquivo de TEXTO para escrita, será reescrito. Cria o arquivo caso ele não exista.
     A  // Abre um arquivo de TEXTO para anexagem, continua do ponto em que parou. Cria o arquivo caso ele não exista.
@@ -231,9 +277,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     Ab  // Abre um arquivo BINARIO para escrita, continua do ponto em que parou.
 
 
-
-
-//* FECHAR O PONTEIRO ==================================================================================================================|
+//* FECHAR O PONTEIRO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Importante fechar os ponteiros para que não haja corrompimento nos arquivos.
 
 //TODO: SINTAXE
@@ -243,7 +287,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     fclose(jogadores);
 
 
-//* ESCREVER NO ARQUIVO ==================================================================================================================|
+//* ESCREVER NO ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
     fprintf(PONTEIRO, "TEXTO");
@@ -253,11 +297,14 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     fprintf(jogadores, "Numero em uma partida de futebol\n");
     fprintf(jogadores, "Numero 1: %d", 17)
 
+
+//* LER O ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+
 //TODO: SINTAXE
     fscanf(PONTEIRO, "FORMATOS", &VARIAVEIS);
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
@@ -268,17 +315,17 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
 0. ESTRUTURAS CONDICIONAIS
 0. ESTRUTURAS DE REPETIÇÃO
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ESTRUTURAS CONDICIONAIS
 //: Estruturas Condicionais são blocos de comandos que são executados apenas em determinados casos.
 
-//* CONDICIONAL - IF -------------------------------------------------------------------------------------------------------------------|
+//* CONDICIONAL - IF +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta é uma condicional que contem duas bifurcações de código, uma para VERDADEIRO e outra para FALSO.
 
 //TODO: TRADUÇÕES
     SE     = if
-    MAS SE = else if //: Opcional
-    SENÃO  = else    //: Opcional
+    MAS SE = else if  // Opcional
+    SENÃO  = else     // Opcional
 
 //TODO: SINTAXE
     if (CONDIÇÃO_1)
@@ -308,14 +355,14 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
         printf("O primeiro numero é menor do que o segundo");
     }
 
-//* CONDICIONAL - SWITCH ---------------------------------------------------------------------------------------------------------------|
+//* CONDICIONAL - SWITCH +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta condicional recebe um parametro e executa um bloco de comando para cada posivel CASO daquele parametro.
 
 //TODO: TRADUÇÕES
     MUDE    - switch
-    CASO    - case    //: Opcional
-    TERMINE - break   //: Opcional
-    RESTO   - default //: Opcional
+    CASO    - case     // Opcional
+    TERMINE - break    // Opcional
+    RESTO   - default  // Opcional
 
 //TODO: SINTAXE
     switch (VARIAVEL)
@@ -351,7 +398,7 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
         break;
     }
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ESTRUTURAS DE REPETIÇÃO
 //: Estruturas de Repetição são meios de se repetir um certo bloco de comando determinas vezes.
 
@@ -360,7 +407,7 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
     ENQUANTO - while
     PARA     - for
 
-//* REPETIÇÃO - WHILE ------------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - WHILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura avalia uma condição e repete um bloco de comandos ENQUANTO sua condição for VERDADEIRA.
 //: Avalia a condição primeiro e depois executa o bloco de código.
 
@@ -377,7 +424,7 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
         numero++;
     }
 
-//* REPETIÇÃO - DO WHILE ---------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - DO WHILE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura avalia uma condição e repete um bloco de comandos ENQUANTO sua condição for VERDADEIRA.
 //: Primeiro executa o código e depois avalia a condição, realiza pelo menos uma vez.
 
@@ -396,7 +443,7 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
     }    
     while (numero < 10);
 
-//* REPETIÇÃO - FOR --------------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - FOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura cria o contador, avalia ele e incrementa seu valor ao mesmo tempo em uma unica linha.
 
 //TODO: SINTAXE
@@ -412,7 +459,7 @@ CAPITULO 0 - ESTRUTURAS DE PROGRAMAÇÃO
     }
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=================================================================================================================================================================================
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
@@ -426,10 +473,10 @@ CAPITULO 0 - FERRAMENTAS BASICAS
 0. CARACTERES DE CONTROLE
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! OPERADORES
 
-//* OPERADORES ARITMÉTICOS -------------------------------------------------------------------------------------------------------------|
+//* OPERADORES ARITMÉTICOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Operadores utilizados para operações matematicas.
 
     + Adição
@@ -438,7 +485,7 @@ CAPITULO 0 - FERRAMENTAS BASICAS
     / Divisão
     % Resto da Divisão          
 
-//* OPERADORES DE ATRIBUIÇÃO -----------------------------------------------------------------------------------------------------------|
+//* OPERADORES DE ATRIBUIÇÃO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Atribuem um valor a si mesmo.
 
     N += 2  //: N = N + 2
@@ -454,7 +501,7 @@ CAPITULO 0 - FERRAMENTAS BASICAS
     N-- Pré Decremento   //: Retorna a variavel e depois Decrementa em 1.
     N++ Pré Incremento   //: Retorna a variavel e depois Incrementa em 1.
 
-//* OPERADORES RELACIONAIS -------------------------------------------------------------------------------------------------------------|
+//* OPERADORES RELACIONAIS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Operadores utilizados para comparar valores.
 
     < Menor que
@@ -464,25 +511,26 @@ CAPITULO 0 - FERRAMENTAS BASICAS
     == Igualdade
     != Diferença
 
-//* OPERADORES LÓGICOS -----------------------------------------------------------------------------------------------------------------|
-// Operadores utilizados para operações lógicas em programação.
+//* OPERADORES LÓGICOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Operadores utilizados para operações lógicas em programação.
     
     AND = & ou && //: Retorna verdadeiro se todas as comparações forem verdadeiras.
     OR  = | ou || //: Retorna verdadeiro se uma ou mais comparações forem verdadeiras.
     NOT = ! ou ~  //: Inverte o estado de uma operação (Verdadeiro -> Falso e vice-versa).
     XOR = ^       //: Retorna verdadeiro se as comparações forem diferentes entre si.
 
-//* OPERADORES BIT A BIT ---------------------------------------------------------------------------------------------------------------|
+//* OPERADORES BIT A BIT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Desloca as casas binarias de um valor numerico.
     >>
     <<
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CONCATENAÇÃO.
 //: Concatenação é quando precisamos unir dois ou mais textos em um.
 
-Simbolo de Concatenção [+]
+//TODO: INSTRUÇÕES
+    Simbolo de Concatenção [+]
 
 //TODO: SINTAXE
     VALOR_1 + VALOR_2;
@@ -492,7 +540,7 @@ Simbolo de Concatenção [+]
     "Meu nome é: " + Nome;
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! MASCARA DE FORMATAÇÃO
 //: Estes operadores convertem um valor de um tipo de variavel para outro tipo.
 
@@ -508,7 +556,7 @@ Simbolo de Concatenção [+]
     "%lf" //: Ponto Flutuante Longo -
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CARACTERES DE CONTROLE
 //: Estes caracteres tem a função de realizar alguma tarefa especifica
 
@@ -526,7 +574,7 @@ Simbolo de Concatenção [+]
     "\'" //: Permite escrever - Aspa simples.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=================================================================================================================================================================================
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
@@ -539,7 +587,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 0. CAPTURAR CADEIA DE CARACTERES
 0. LIMPAR MEMORIA
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! IMPRIMIR NA TELA
 //: Função para impresão de caracteres no console do aplicativo.
 
@@ -552,7 +600,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     printf("Numero: %d", N1); 
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CAPTURAR TELA
 //: Captura os valores digitados pelo usuário no console.
 
@@ -564,7 +612,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     scanf("%s", Nome);    //: Apenas valores de string (%s) não precisão do sinal de [&].
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CAPTURAR CADEIA DE CARACTERES
 //: Utilizamos esta função para capturar uma cadeia de caracteres digitada pelo usuário no console.
 //: É utilizada em conjunto de Arrays (Pg: x).
@@ -577,7 +625,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     fgets(Nome, 50, stdin);
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! LIMPAR A MEMORIA
 //: Esta função limpa todo o lixo de variaveis antigas contidas na memória.
 

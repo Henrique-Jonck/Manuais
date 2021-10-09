@@ -1,3 +1,12 @@
+/*-| Autor.............: Henrique Campos Jonck - 17 Anos                                 |-*/
+/*-| Data de Inicio....: 15/05/2021                                                      |-*/
+/*-| Guia de Linguagem.: SQLSERVER                                                       |-*/
+/*_________________________________________________________________________________________*/
+/*-| Este guia foi criado com o intuito de estudos e anotações.                          |-*/
+/*-| Escrito no editor de código Visual Studio Code.                                     |-*/
+/*-| Altamente recomendavel que se utilize a extensão "Better Comments" de "Aaron Bond". |-*/
+
+
 /*TERMOS*/
 BANCO   -- Principal parte, onde são criadas todas as tabelas
 TABELA  -- Subparte do banco, onde cria-se os 'diagramas' de insersão de dados

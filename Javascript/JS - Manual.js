@@ -1,6 +1,34 @@
-// Autor.............: Henrique Campos Jonck - 17 Anos
-// Data de Inicio....: 02/09/2021
-// Guia de Linguagem.: JavaScript
+//-| Autor.............: Henrique Campos Jonck - 17 Anos                                 |-//
+//-| Data de Inicio....: 02/09/2021                                                      |-//
+//-| Guia de Linguagem.: JavaScript                                                      |-//
+//-----------------------------------------------------------------------------------------//
+//-| Este guia foi criado com o intuito de estudos e anotações.                          |-//
+//-| Escrito no editor de código Visual Studio Code.                                     |-//
+//-| Altamente recomendavel que se utilize a extensão "Better Comments" de "Aaron Bond". |-//
+
+
+//-| INSTRUÇÕES PARA UTILIZAÇÃO |-//
+=====================================================================================================================================|PG|
+//! TITULO DA PAGINA !\\
+//: Descrição da pagina.
+
+//* SUB-TITULO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Descrição do sub-titulo.
+
+//? SUB-SUBTITULO ----------------------------------------------------------------------------------------------------------------------|
+//: Descrição do sub-subtitulo.
+
+//TODO: SINTAXE
+    Sintaxe dos Comandos  // Comentario a respeito da Sintaxe.
+
+//TODO: EXEMPLO
+    Exemplo dos Comandos  // Comentario a respeito do Exemplo.
+
+//TODO: INSTRUÇÕES
+    Informação Complementar
+
+
+========================================================================================================================================|
 
 //? SUMÁRIO GERAL
 ------------------------------------------
@@ -47,12 +75,12 @@ CAPITULO 6 - FUNÇÕES PRONTAS
 0. CONSOLE
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! INTRODUÇÃO.
 //: O Javascript é mais comummente utilizado para dar uma certa interatividade em paginas WEB.
 //: Com o JS podemos validar campos, enviar pop-ups, alterar elementos HTML e etc...
@@ -60,7 +88,7 @@ CAPITULO 6 - FUNÇÕES PRONTAS
     JAVASCRIPT //: É a linguagem de programação mais utilizada no mundo.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! HISTORIA.
 
     + /* JAVASCRIPT foi criado em meados da década de 90 por Brendan Eich a serviço da Netscape. */
@@ -69,7 +97,7 @@ CAPITULO 6 - FUNÇÕES PRONTAS
     + /* Para conter a Microsoft o JS foi padronizado pelas normas ECMA, surgindo assim a linguagem ECMASCRIPT. */
     + /* Atualmente a nomenclatura ECMASCRIPT é utilizada apenas para se referir as suas versões */
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! TECNOLOGIAS.
 
 JAVASCRIPT //: Linguagem de programação
@@ -86,17 +114,17 @@ JQUERY   //: Biblioteca em JS que visa simplificar os scripts interpretados pelo
 REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em paginas WEB, muito utilizado por sites famosos.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! BIBLIOTECAS.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ARVORE DOM.
 //: Arvore com os componetes pais(Parents) e filhos(Child), de forma que esquematiza a hierarquia dos componentes HTML.
 
-//* SIGNIFICADO DE DOM
+//* SIGNIFICADO DE DOM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
     DOM  //: Document Object Model - Conjunto de objetos dentro do navegador que da acesso aos componentes internos do Website.
 
-//* ARVORE DOM
+//* ARVORE DOM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
     window  //: Tudo dentro do JS esta dentro de um objeto "window". (Janela do Navegador)
         + location //: Informa a localização do site, (URL, Pagina atual, Pagina anterior)
         + console  //: Referese ao console do navegador.
@@ -114,18 +142,18 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
         + history  //: Quarda as informações de onde voçê veio e para aonde voçê vai.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! VARIAVEIS
 //: Variaveis são espaços na memoria onde podemos armazenar uma série de informações.
 //: Cada variavel pode receber um Tipo de valor (Texto, Numerico, Booleano e etc...).
 //: Em JS os Tipos de variaveis são definidos implicitamente.
 
-//* CRIANDO UMA VARIAVEL ---------------------------------------------------------------------------------------------------------------|
+//* CRIANDO UMA VARIAVEL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //Quando criamos uma variavel não definimos seu tipo, o JS fará isso implicitamente e tambem trocará seu tipo automaticamente.
 
 //TODO: SINTAXE
@@ -137,7 +165,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     const Pi = 3.14; //: Criando e ja definido seu valor.
 
 
-//* TIPOS DE VARIAVEIS -----------------------------------------------------------------------------------------------------------------|
+//* TIPOS DE VARIAVEIS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Em JS sempre declaramos variaveis utilizando 3 posiveis tipos. Cada tipo tem uma funcionalidade própria.   
 
 //? TIPOS BASICOS
@@ -155,18 +183,18 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     undefined //: Valor Indefinido
 
 
-//* DESCOBRINDO TIPO -------------------------------------------------------------------------------------------------------------------|
+//* DESCOBRINDO TIPO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Existem alguns metodos de se descobrir o tipo primitivo de alguma varivavel.
 
     typeof Pi            //: Retorna o tipo daquela variavel {Number}
     typeof "Hello World" //: Retorna o tipo daquele valor    {String}
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ARRAYS
 //: Arrays são como super variaveis em que podemos armazenar multiplos valores dentro dela.
 
-//* CRIANDO UM ARRAY -------------------------------------------------------------------------------------------------------------------|
+//* CRIANDO UM ARRAY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Sempre que criamos um Array devemos definir seu valor entre Colchetes [].
 //: Podemos misturar os tipos primitivos contidos nos valores.
 
@@ -177,7 +205,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     const Cores = ["Amarelo", "Azul", "Vermelho", "Verde"];
     const Mistu = ["Texto", 2021, true];
 
-//* CHAMANDO UM ARRAY ------------------------------------------------------------------------------------------------------------------|
+//* CHAMANDO UM ARRAY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Sempre que chamamos um Array, buscamos um valor pelo seu indice que sempre começa em 0.
 
 //TODO: SINTAXE
@@ -188,11 +216,11 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     Mistu[2] = 2030;    //: Troca o valor "2021" por "2030"
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! MATRIZES
 //: Matrizes são semelhantes a Arrays (Pg: x), porem podemos chamamar por nomes de colunas ao inves de utilizar indices.
 
-//* CRIANDO UMA MATRIZ -----------------------------------------------------------------------------------------------------------------|
+//* CRIANDO UMA MATRIZ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
     const NOME_MATRIZ = [NOME_COLUNA : VALOR1, NOME_COLUNA : VALOR2, ...];
@@ -200,7 +228,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
 //TODO: EXEMPLO
     const Identidade = [Nome: "Henrique", Sobrenome: "Jonck", Idade: 17, Brasileiro: true];
 
-//* CHAMANDO UMA MATRIZ ----------------------------------------------------------------------------------------------------------------|
+//* CHAMANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Sempre que chamamos uma matriz utilizamos o nome da coluna entre aspas.
 
 //TODO: SINTAXE
@@ -211,12 +239,12 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     Identidade["Idade"] = 18;
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! FUNÇÕES
 //: Funções são utilizadas para criar um bloco de comandos que pode ser executado diversas sem a necessidade de reescrever o código.
 //: Em alguns casos podemos informar PARAMETROS que são informações externas que passamos para esta função.
 
-//* CRIAR UMA FUNÇÃO -------------------------------------------------------------------------------------------------------------------|
+//* CRIAR UMA FUNÇÃO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Criamos uma função utilizando a palavra reservada "function".
 
 //TODO INSTRUCÕES
@@ -245,7 +273,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
         window.alert("Função Executada!");
     }
 
-//* CHAMAR FUNÇÃO ----------------------------------------------------------------------------------------------------------------------|
+//* CHAMAR FUNÇÃO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Chamamos uma função apenas escrevendo seu nome, caso necessite de parametros entao os informamos.
 
 //TODO: SINTAXE
@@ -256,7 +284,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     ExecutarComandos();           //: Apenas executa os comandos da função, envia um pop-up com "Função Executada!".
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! OUVIDORES
 
 //TODO: SINTAXE
@@ -266,16 +294,16 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     var BTN = getElementById('Botao');
     BTN.addEventListener('click', MudaCor)
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ESTRUTURAS CONDICIONAIS
 //: Estruturas Condicionais são blocos de comandos que são executados apenas em determinados casos.
 
-//* CONDICIONAL - IF -------------------------------------------------------------------------------------------------------------------|
+//* CONDICIONAL - IF +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta é uma condicional que contem duas bifurcações de código, uma para VERDADEIRO e outra para FALSO.
 
 //TODO: TRADUÇÕES
@@ -312,7 +340,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     }
 
 
-//* CONDICIONAL - SWITCH ---------------------------------------------------------------------------------------------------------------|
+//* CONDICIONAL - SWITCH +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta condicional recebe um parametro e executa um bloco de comando para cada posivel CASO daquele parametro.
 
 //TODO: TRADUÇÕES
@@ -355,7 +383,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
         break;
     }
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! ESTRUTURAS DE REPETIÇÃO
 //: Estruturas de Repetição são meios de se repetir um certo bloco de comando determinas vezes.
 
@@ -364,7 +392,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     ENQUANTO - while
     PARA     - for
 
-//* REPETIÇÃO - WHILE ------------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - WHILE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura avalia uma condição e repete um bloco de comandos ENQUANTO sua condição for VERDADEIRA.
 //: Avalia a condição primeiro e depois executa o bloco de código.
 
@@ -381,7 +409,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
         numero++;
     }
 
-//* REPETIÇÃO - DO WHILE ---------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - DO WHILE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura avalia uma condição e repete um bloco de comandos ENQUANTO sua condição for VERDADEIRA.
 //: Primeiro executa o código e depois avalia a condição, realiza pelo menos uma vez.
 
@@ -400,7 +428,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     }    
     while (numero < 10);
 
-//* REPETIÇÃO - FOR --------------------------------------------------------------------------------------------------------------------|
+//* REPETIÇÃO - FOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Esta estrutura cria o contador, avalia ele e incrementa seu valor ao mesmo tempo em uma unica linha.
 
 //TODO: SINTAXE
@@ -416,18 +444,18 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     }
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! IDENTIFICADORES
 //: Identificadores são utilizados para se dar um "Nome" unico para algum elemento. Seu nome não poderá ser repetido em outro elemento.
 //: Para mais detales visite o manual de HTML na pagina x.
 
-//* DEFININDO UM ID --------------------------------------------------------------------------------------------------------------------|
+//* DEFININDO UM ID ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Um identificador não pode ter um nome repetido de outro elemento.
 
 //TODO: SINTAXE
@@ -436,7 +464,8 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
 //TODO: EXEMPLO
     <p id="Paragrafo"> Este é o meu paragrafo. </p>
 
-//* CHAMANDO UM ID ---------------------------------------------------------------------------------------------------------------------|
+
+//* CHAMANDO UM ID +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Como um ID não pode se repetir existe apenas um elemento com este identificador.
 
 //TODO: SINTAXE
@@ -446,13 +475,13 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     var Par = document.getElementById('Paragrafo');
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CLASSES
 //: Classes são identificadores multiplos em HTML. Serverm para podermos categorizar os elementos.
 //: Podemos definir uma mesma classe para multiplos elementos e tambem mais de 1 classe para cada um.
 //: Para mais detales visite o manual de HTML na pagina x.
 
-//* DEFININDO UMA CLASSE ---------------------------------------------------------------------------------------------------------------|
+//* DEFININDO UMA CLASSE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
     <tag class="NOME_CLASSE"> CONTEÚDO </tag>
@@ -462,7 +491,8 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     <h2 class="Titulos Subtitulo"> Segundo Titulo </h2>
     <h3 class="Subtitulo"> Sub-Titulo </h3>
 
-//* CHAMANDO UMA CLASSE ----------------------------------------------------------------------------------------------------------------|
+
+//* CHAMANDO UMA CLASSE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Como pode existir mais de um elemento com a mesma classe, podemos informar o indice de qual elemento especifico queremos chamar.
 //: Caso não informemos um indice e exista mais de um elemento com a mesma classe, ele retornara um Array com todos os elementos.
 
@@ -485,17 +515,18 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     var Tit4 = document.getElementById('Principal').getElementsByClassName('Subtitulo');
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! OPERADORES
 
-//* OPERADORES ARITMÉTICOS -------------------------------------------------------------------------------------------------------------|
+//* OPERADORES ARITMÉTICOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Utilizados em operações matematicas.
+
     + Adição
     - Subtração
     * Multiplicação
@@ -503,8 +534,9 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     % Resto da Divisão
     ** Exponenciação
 
-//* OPERADORES DE ATRIBUIÇÃO -----------------------------------------------------------------------------------------------------------|
+//* OPERADORES DE ATRIBUIÇÃO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Atribuem um valor a si mesmo.
+
     N += 2  //: N = N + 2
     N -= 2  //: N = N - 2
     N *= 2  //: N = N * 2
@@ -518,7 +550,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     N-- Pré Decremento   //: Retorna a variavel e depois Decrementa em 1.
     N++ Pré Incremento   //: Retorna a variavel e depois Incrementa em 1.
 
-//* OPERADORES RELACIONAIS -------------------------------------------------------------------------------------------------------------|
+//* OPERADORES RELACIONAIS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Operadores utilizados para comparar valores, sempre retornam valores do tipo (true, false).
 
     (a < b)  Menor que  
@@ -533,7 +565,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     (a === b) Identidade
     (a !== b) Desigualdade
 
-//* OPERADORES LÓGICOS -----------------------------------------------------------------------------------------------------------------|
+//* OPERADORES LÓGICOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Operadores utilizados para operações lógicas em programação, contem a ordem de execução dos operadores.
     
     NOT = !  //: Inverte o estado de uma operação (Verdadeiro -> Falso e vice-versa).
@@ -541,7 +573,7 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
     OR  = || //: Retorna verdadeiro se uma ou mais comparações forem verdadeiras.
     XOR = ^       //: Retorna verdadeiro se as comparações forem diferentes entre si.
 
-//* OPERADOR TERNARIO ------------------------------------------------------------------------------------------------------------------|
+//* OPERADOR TERNARIO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Verifica uma condição e retorna um valor caso "true" ou um valor caso "false".
 
 //TODO: SINTAXE
@@ -550,11 +582,14 @@ REACT    //: Biblioteca em JS com foco em criar interfaces com o usuário em pag
 //TODO: EXEMPLO
     var Resultado = (10 < 20) ? "Verdadeiro" : "Falso"  //: {Resultado -> "Verdadeiro"}
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+
+=====================================================================================================================================|99|
 //! CONCATENAÇÃO.
 //: Concatenação é quando precisamos unir dois ou mais textos em um.
 
-Simbolo de Concatenção [+]
+//TODO: INSTRUÇÕES
+    Simbolo de Concatenção [+]
+
 //: Em JS qualquer valor não textual se tornará textual quando concatenado com uma String.
 //: Como o operador de soma tambem utiliza o [+], equações devem ser isoladas das Strings.
 
@@ -562,7 +597,7 @@ Simbolo de Concatenção [+]
     String + String //: Concatenação
     String + Number //: Concatenação
 
-//* CONCATENAÇÃO SIMPLES ---------------------------------------------------------------------------------------------------------------|
+//* CONCATENAÇÃO SIMPLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //TODO: SINTAXE
     VALOR_1 + VALOR_2
 
@@ -576,7 +611,7 @@ Simbolo de Concatenção [+]
     "Juntar " + Valor1      //: Concatena a String com a Variavel "Valor1".
 
 
-//* CONCATENAÇÃO COM TEMPLATES ---------------------------------------------------------------------------------------------------------|
+//* CONCATENAÇÃO COM TEMPLATES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Templates são utilizados para concatenar o valor de uma variavel de forma mais simples, sem precisar fechar aspas.
 //: Templates devem ser realizados entre crases [``].
 
@@ -589,24 +624,24 @@ Simbolo de Concatenção [+]
     var Texto = `Meu nome é ${nome}`; // {"Men"}
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CONVERSÃO DE TIPOS PRIMITIVOS
 //: O JS possui uma capacidade de converter alguns tipos de forma automatica.
 //: Porem em alguns casos será necessario utilizar algum destes metodos de conversão abaixo.
 
-//* STRING PARA NUMBER -----------------------------------------------------------------------------------------------------------------| 
-    
+//* STRING PARA NUMBER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+
     parseInt("12");   //: Converte o texto "12" para um Numero Inteiro.
     parseFloat("12"); //: Converte o texto "12" para um Numero Real.
     Number("Numero"); //: Converte a variavel "Numero" automaticamente para seu respectivo valor (Inteiro ou Real).
 
-//* NUMBER -> STRING -------------------------------------------------------------------------------------------------------------------|
+//* NUMBER -> STRING +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
     Numero.toString(); //: Converte a variavel "Numero" em string.
     String(Numero);    //: Converte a variavel "Numero" em string.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! FORMATAÇÕES PARA STRINGS
 //: Estas funções servem para trasformar ou receber informações sobre qualquer texto em JS.
 
@@ -619,7 +654,7 @@ Simbolo de Concatenção [+]
     texto.toLowerCase(); //: Retorna a String em Minusculas {javascript}.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! FORMATAÇÕES PARA NUMBERS
 
 //TODO EXEMPLO
@@ -629,25 +664,25 @@ Simbolo de Concatenção [+]
     numero.toFixed(2); //: Retorna o numero com a quantidade de casas decimais que foi definido {323.20}.
     
 
-//* ADICIONAR PADRÃO MONETARIO ---------------------------------------------------------------------------------------------------------|
+//? ADICIONAR PADRÃO MONETARIO ---------------------------------------------------------------------------------------------------------|
     numero.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) //: {R$ 323,20}
                                                                            //: Retorna o numero no padrão monetario especificado
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! REGEX.
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CALLBACK.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! WINDOW
 //: Estas funções se referem a toda a pagina WEB do HTML.
 
@@ -656,13 +691,13 @@ Simbolo de Concatenção [+]
     window.prompt("Mensagem")   //Pop-up com caixa de texto.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! DOCUMENT
 //: Estas funções se referem apenas ao documento escrito em HTML.
 
     document.write("Mensagem"); //Escreve no corpo do documento, tambem é possivel adicinar Tags HTML dentro dele
 
-//* PEGAR ELEMENTO ---------------------------------------------------------------------------------------------------------------------|
+//? PEGAR ELEMENTO ---------------------------------------------------------------------------------------------------------------------|
 
     document.getElementsByTagName('p')[1]        //: Retorna oa elementoa da "tag" selecionada no indice 0 - {Segundo <p> da pagina}.
     document.getElementById('ID')                //: Retorna o elemento com o "id" selecionado
@@ -673,25 +708,25 @@ Simbolo de Concatenção [+]
     document.querySelector('Tag#Id') //: Buscamos informando a tag e o id, podemos trocar o id por uma classe porem trocamos (# -> .)
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! CONSOLE
 //: Estas funções se referem ao aplicativo de console embutido no navegador.
 
     console.log("Mensagem"); // Escreve uma mensagem no console.
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! FUNÇÕES ASSINCRONAS
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================================================================================|
 //--|*********************************************************************************************************************************|--|**********************************|--//
 //--|*********************************************************************************************************************************|--|            CAPITULO 1            |--//
 //--|*********************************************************************************************************************************|--|**********************************|--//
 
 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|99|
+=====================================================================================================================================|99|
 //! RASCUNHOS.
 
     console.log("Esta é uma mensagem via CMD"); // Escreve no Console do site
