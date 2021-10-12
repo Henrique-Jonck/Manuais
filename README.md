@@ -1,7 +1,7 @@
 # Manuais
  Anotações sobre todas as Linguagens de Programação/Marcação que estudo atualmente.
 
-# Instruções
+## Instruções
  Caso queira utilizar minhas anotações saiba de algumas coisas:
 1. Este Manual foi criado apenas com a intenção de estudo e esta em constante desenvolvimento.
 2. As linguagens *MYSQL*, *SQLSERVER*, e *C#* estão pausadas neste momento.

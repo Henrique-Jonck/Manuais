@@ -10,19 +10,19 @@
 //-| INSTRUÇÕES PARA UTILIZAÇÃO |-//
 =====================================================================================================================================|PG|
 //! TITULO DA PAGINA !\\
-//: Descrição da pagina.
+//& Descrição da pagina.
 
 //* SUB-TITULO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Descrição do sub-titulo.
 
 //? SUB-SUBTITULO ----------------------------------------------------------------------------------------------------------------------|
-//: Descrição do sub-subtitulo.
+// Descrição do sub-subtitulo.
 
 //TODO: SINTAXE
     Sintaxe dos Comandos  // Comentario a respeito da Sintaxe.
 
 //TODO: EXEMPLO
-    Exemplo dos Comandos  // Comentario a respeito do Exemplo.
+    Exemplo dos Comandos  //& Comentario a respeito do Exemplo.
 
 //TODO: INSTRUÇÕES
     Informação Complementar
