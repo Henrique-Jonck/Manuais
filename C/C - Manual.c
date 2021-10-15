@@ -264,17 +264,26 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 
 //? MODOS ------------------------------------------------------------------------------------------------------------------------------|
-    R  // Abre um arquivo de TEXTO para leitura.
-    W  // Abre um arquivo de TEXTO para escrita, será reescrito. Cria o arquivo caso ele não exista.
-    A  // Abre um arquivo de TEXTO para anexagem, continua do ponto em que parou. Cria o arquivo caso ele não exista.
-
-    R+  //
-    W+  //: Abrem um arquivo de TEXTO para Leitura e Escrita. Cria o arquivo caso ele não exista. 
-    A+  //
-
-    Rb  // Abre um arquivo BINARIO para leitura.
-    Wb  // Abre um arquivo BINARIO para escrita, será sobreescrito.
-    Ab  // Abre um arquivo BINARIO para escrita, continua do ponto em que parou.
+ 
+//-----------------+-------------------+---------------------+-------------------------+
+// MODO // ARQUIVO |       FUNÇÃO      | ARQUIVO INEXISTENTE |   ARQUIVO JA EXISTENTE  |
+//-----------------+-------------------+---------------------+-------------------------+
+    R   // TEXTO   | Leitura           | Retorna NULL        | OK                      |
+    W   // TEXTO   | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
+    A   // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    R+  // TEXTO   | Leitura e Escrita | Retorna NULL        | OK                      |
+    W+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
+    A+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    Rb  // BINARIO | Leitura           | Retorna NULL        | OK                      |
+    Wb  // BINARIO | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
+    Ab  // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    Rb+ // BINARIO | Leitura e Escrita | Retorna NULL        | OK                      |
+    Wb+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
+    Ab+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+//-----------------+-------------------+---------------------+-------------------------+
 
 
 //* FECHAR O PONTEIRO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
@@ -302,6 +311,65 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 //TODO: SINTAXE
     fscanf(PONTEIRO, "FORMATOS", &VARIAVEIS);
+
+
+=====================================================================================================================================|99|
+//! ARQUIVO BINARIO
+
+    fread(BUFFER, TAMANHO_BYTES, QUANTIDADE, NOME_ARQUIVO)
+    fwrite(BUFFER, TAMANHO_BYTES, QUANTIDADE, NOME_ARQUIVO)
+    fseek(PONTEIRO, OFFSET, ORIGEM)
+
+=====================================================================================================================================|99|
+//! STRUCTS
+//: Structs são variaveis especiais que contem outras variaveis dentro dela.
+
+//* CRIANDO UMA STRUCT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+
+//TODO: SINTAXE
+/*SINTAXE 1*/
+    typedef struct IDENTIFICADOR
+    {
+        TIPO NOME_MEMBRO;
+    } NOME_STRUCT;
+
+/*SINTAXE 2*/
+    struct IDENTIFICADOR
+    {
+        TIPO NOME_MEMBRO;
+    };
+
+    IDENTIFICADOR NOME_STRUCT NOME_VARIAVEL;
+
+//TODO: EXEMPLO
+    typedef struct Matematica
+    {
+        float numero1;
+        float numero2;
+        float resultado;
+    } Somar;
+    
+
+//* CHAMANDO A STRUCT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Quando chamamos uma struct utilizamos ela como se fosse um tipo de variavel distinto.
+
+//TODO: SINTAXE
+    NOME_STRUCT NOME_VARIAVEL;
+
+//TODO: EXEMPLO
+    Somar conta;
+
+
+//* ACESSANDO A STRUCT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+   
+//TODO: SINTAXE
+    NOME_VARIAVEL.NOME_MEMBRO;
+
+//TODO: EXEMPLO
+    conta.numero1 = 10;
+    conta.numero2 = 15;
+    conta.resultado = conta.numero1 + conta.numero2;  
+    printf("%f", conta.resultado);  // Resultado = 10 + 15;
 
 
 ================================================================================================================================================================================
@@ -631,5 +699,3 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 //TODO: SINTAXE
     setbuf(stdin, NULL)
-
-
