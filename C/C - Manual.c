@@ -89,6 +89,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     #include <stdio.h>   //: Manipulação de entrada e saida do usuário.
     #include <stdlib.h>  //:
     #include <stdbool.h> //: Adiciona o tipo de variavel "bool".
+    #include <locale.h>
 
 =====================================================================================================================================|99|
 //! VARIAVEIS
@@ -155,7 +156,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //! MATRIZ
 //: Matrizes são como Arrays (Pg: x) porem com itens contidos em Linhas e Colunas.
 
-//* CRIANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//* CRIANDO UMA MATRIZ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Qundo criamos uma Matriz informamos o numero maximo de linhas e tambem o numero maximo de colunas.
 
 //TODO: SINTAXE
@@ -165,7 +166,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     int Tabela[3][4]; // Cria uma Matriz de 3 Linhas e 4 Colunas.
 
 
-//* CHAMANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//* CHAMANDO UMA MATRIZ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Quando chamarmos uma Matriz buscamos um item pelo seu indice que SEMPRE inicia em 0.
 
 //TODO: SINTAXE
@@ -227,7 +228,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //: Quando quisermos executar uma função apenas chamamos o seu nome e informamos os Parametros caso necessario.
 
 //TODO: SINTAXE
-    NOME_FUNÇÃO( PARAMETRO )
+    FUNÇÃO( PARAMETRO )
 
 //TODO: EXEMPLO
     int main()
@@ -323,53 +324,103 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 =====================================================================================================================================|99|
 //! STRUCTS
 //: Structs são variaveis especiais que contem outras variaveis dentro dela.
+//: Sua função é armanezar multiplos dados de uma mesma entidade em uma mesma variavel.
 
 //* CRIANDO UMA STRUCT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 
 //TODO: SINTAXE
 /*SINTAXE 1*/
-    typedef struct IDENTIFICADOR
+    typedef struct NOME_IDENTIFICADOR
     {
-        TIPO NOME_MEMBRO;
+        TIPO  NOME_MEMBRO;
     } NOME_STRUCT;
 
+
 /*SINTAXE 2*/
-    struct IDENTIFICADOR
+    struct NOME_IDENTIFICADOR
     {
-        TIPO NOME_MEMBRO;
+        TIPO  NOME_MEMBRO;
     };
 
-    IDENTIFICADOR NOME_STRUCT NOME_VARIAVEL;
 
 //TODO: EXEMPLO
-    typedef struct Matematica
+/*EXEMPLO 1*/
+    typedef struct Medidas
+    {
+        float idade;
+        float altura;
+        float peso;
+    }pessoas;
+
+
+/*EXEMPLO 2*/
+    struct Matematica
     {
         float numero1;
         float numero2;
         float resultado;
-    } Somar;
+    };
     
 
-//* CHAMANDO A STRUCT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//* ACESSANDO A STRUCT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Quando chamamos uma struct utilizamos ela como se fosse um tipo de variavel distinto.
 
 //TODO: SINTAXE
-    NOME_STRUCT NOME_VARIAVEL;
+/*SINTAXE 1*/
+    STRUCT  NOME_VARIAVEL;
+
+/*SINTAXE 2*/
+    IDENTIFICADOR  NOME_STRUCT  NOME_VARIAVEL;
+
 
 //TODO: EXEMPLO
-    Somar conta;
+/*EXEMPLO 1*/
+    pessoas joao;
+    pessoas povo[10];
+
+/*EXEMPLO 2*/
+    Matematica soma conta;
 
 
-//* ACESSANDO A STRUCT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//* CHAMANDO A STRUCT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
    
 //TODO: SINTAXE
-    NOME_VARIAVEL.NOME_MEMBRO;
+    VARIAVEL.MEMBRO;
+
 
 //TODO: EXEMPLO
     conta.numero1 = 10;
-    conta.numero2 = 15;
-    conta.resultado = conta.numero1 + conta.numero2;  
-    printf("%f", conta.resultado);  // Resultado = 10 + 15;
+    conta.numero2 = 20;
+    
+    joao.altura = 1.85;
+    joao.peso = 89;
+    joao.idade = 22;
+
+
+//* STRUCTS COMO PARAMETROS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Podemos utilizar uma struct como parametro de uma função para acessar os valores da struct informada.
+
+//TODO: SINTAXE
+/*CRIANDO A FUNÇÃO*/
+    RETORNO NOME_FUNÇÃO(STRUCT NOME_VARIAVEL)
+    {
+        VARIAVEL.MEMBRO;
+    }
+
+/*CHAMANDO A FUNÇÃO*/
+    FUNÇÃO(STRUCT);
+
+//TODO: EXEMPLO
+    void ImprimeDados(pessoas p)
+    {
+        printf("Altura: %.2f  Peso: %.2f  Idade: %.2f", p.altura, p.peso, p.idade);
+    }
+
+    int main()
+    {
+        ImprimeDados(joao); // Imprime todos os dados da struct "pessoas";
+        return 0;
+    }
 
 
 ================================================================================================================================================================================
@@ -698,4 +749,19 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //: Esta função limpa todo o lixo de variaveis antigas contidas na memória.
 
 //TODO: SINTAXE
-    setbuf(stdin, NULL)
+    setbuf(stdin, NULL);
+    fflush(stdin);
+
+
+=====================================================================================================================================|99|
+//! HABILITAR CARACTERES PORTUGUESES
+//: Utiliza da biblioteca <locale.h>.
+
+//TODO: SINTAXE
+    setlocale(LC_ALL, "Portuguese");
+
+=====================================================================================================================================|99|
+//! FUNÇÃO SYSTEM
+
+    system("cls");   // Limpa a tela
+    system("pause"); // Pausa o programa ate que alguma tecla seja pressionada, tambem adiciona uma mensagem 
