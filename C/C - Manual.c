@@ -43,7 +43,10 @@ CAPITULO 2 - CONTEÚDO BASICO
 0. BIBLIOTECAS
 0. VARIAVEIS
 0. ARRAY/VETOR
-0. MATIRZ
+0. MATRIZ
+0. FUNÇÕES
+0. PONTEIROS
+0. STRUCTS
 
 ------------------------------------------
 CAPITULO 3 - ESTRUTURAS DE PROGRAMAÇÃO
@@ -55,7 +58,17 @@ CAPITULO 3 - ESTRUTURAS DE PROGRAMAÇÃO
 CAPITULO 4 - FERRAMENTAS BASICAS
 
 0. OPERADORES
+0. CONCATENAÇÃO
 0. MASCARAS DE FORMATAÇÃO
+0. CARACTERES DE CONTROLE
+
+------------------------------------------
+CAPITULO 5 - FUNÇÕES PRONTAS
+
+0. IMPRIMIR NA TELA
+0. CAPTURAR TELA
+0. CAPTURAR CADEIA DE CARACTERES
+0. LIMPAR MEMORIA
 
 
 ================================================================================================================================================================================|
@@ -70,6 +83,9 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 0. VARIAVEIS
 0. ARRAY/VETOR
 0. MATRIZ
+0. FUNÇÕES
+0. PONTEIROS
+0. STRUCTS
 
 =====================================================================================================================================|99|
 //! BIBLIOTECAS
@@ -89,7 +105,9 @@ CAPITULO 0 - FUNÇÕES PRONTAS
     #include <stdio.h>   //: Manipulação de entrada e saida do usuário.
     #include <stdlib.h>  //:
     #include <stdbool.h> //: Adiciona o tipo de variavel "bool".
-    #include <locale.h>
+    #include <locale.h>  //: Permite leitura de caracteres de outras linguas.
+    #include <conio.h>   //: 
+    #include <string.h>  //: Permite ampla manipulação de strings.
 
 =====================================================================================================================================|99|
 //! VARIAVEIS
@@ -121,7 +139,7 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //* CRIANDO UMA CONSTANTE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
 //: Constantes devem ser criadas fora do escopo do MAIN.
 
-//TODO: SINTAXE
+//TODO: SINTAXE [ESCOPO - GLOBAL]
     #define NOME_CONSTANTE VALOR;
 
 //TODO: EXEMPLO
@@ -211,6 +229,10 @@ CAPITULO 0 - FUNÇÕES PRONTAS
         printf("Sua idade: %d", idade); 
     }
 
+    *alteravael
+
+    sua_Idade(&alteravel)
+
 
 //? RETORNOS ---------------------------------------------------------------------------------------------------------------------------|
 //: Retornos são valores que uma função irá enviar de volta para o mesmo local de onde esta função foi chamada.
@@ -243,75 +265,54 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
 =====================================================================================================================================|99|
 //! PONTEIROS
-//: Ponteiros são utilizados para manipular arquivos de Texto ou Binarios. Com eles Escrevemos e Lemos nestes arquivos.
+//: Ponteiros são utilizados para apontar/indicar o endereço na memoria de uma variavel.
 
 //* CRIANDO O PONTEIRO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Criamos o ponteiro do mesmo geito que uma variavel comum, com a exceção que adicionamos um asterisco antes do nome do ponteiro.
 
 //TODO: SINTAXE
-    FILE *NOME_PONTEIRO;
+    TIPO *NOME_PONTEIRO;
 
 //TODO: EXEMPLO
-    FILE *jogadores;
+    int *pont;
 
-//* ABRINDO O PONTEIRO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
-//: Para abrir um ponteiro informamos o nome do Ponteiro e o nome do arquivo que será criado ou acessado(Informe o caminho do arquivo).
-//: Tambem informamos o modo de manipulação (Leitura, Escrita, Anexagem).
+//* INDICAR ENDEREÇO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Utilizado apenas para informar o endereço ao qual este ponteiro esta apontando.
 
 //TODO: SINTAXE
-    PONTEIRO = fopen("NOME_ARQUIVO", "MODO");
+    PONTEIRO = &VARIAVEL;
 
 //TODO: EXEMPLO
-    jogadores = fopen("Brasil", "w"); // Criará um arquivo (Brasil.txt) no ponteiro "jogadores" e informa que será no modo de escrita.
+    pont = &vari; // O ponteiro "pont" recebe o endereço na memoria da variavel "vari".
 
-
-//? MODOS ------------------------------------------------------------------------------------------------------------------------------|
- 
-//-----------------+-------------------+---------------------+-------------------------+
-// MODO // ARQUIVO |       FUNÇÃO      | ARQUIVO INEXISTENTE |   ARQUIVO JA EXISTENTE  |
-//-----------------+-------------------+---------------------+-------------------------+
-    R   // TEXTO   | Leitura           | Retorna NULL        | OK                      |
-    W   // TEXTO   | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
-    A   // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
-        //         |                   |                     |                         |
-    R+  // TEXTO   | Leitura e Escrita | Retorna NULL        | OK                      |
-    W+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
-    A+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
-        //         |                   |                     |                         |
-    Rb  // BINARIO | Leitura           | Retorna NULL        | OK                      |
-    Wb  // BINARIO | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
-    Ab  // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
-        //         |                   |                     |                         |
-    Rb+ // BINARIO | Leitura e Escrita | Retorna NULL        | OK                      |
-    Wb+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
-    Ab+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
-//-----------------+-------------------+---------------------+-------------------------+
-
-
-//* FECHAR O PONTEIRO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
-//: Importante fechar os ponteiros para que não haja corrompimento nos arquivos.
+//* ATRIBUR ENDEREÇO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Agora utilizamos o endereço contido no ponteiro para indicar em que local da memoria o valor será armazenado.
 
 //TODO: SINTAXE
-    fclose(PONTEIRO);
+    *PONTEIRO = VALOR;
 
 //TODO: EXEMPLO
-    fclose(jogadores);
+    *pont = 10; // O endereco no ponteiro que contem a variavel "vari" agora contem o valor 10, ou seja (vari = 10)
 
 
-//* ESCREVER NO ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
-
-//TODO: SINTAXE
-    fprintf(PONTEIRO, "TEXTO");
-    fprintf(PONTEIRO, "MASCARA %d", VARIAVEL)
-
-//TODO: EXEMPLO
-    fprintf(jogadores, "Numero em uma partida de futebol\n");
-    fprintf(jogadores, "Numero 1: %d", 17)
-
-
-//* LER O ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//* DESCOBRIR ENDEREÇO
+//: Sempre que quisermos descobrir o endereço de alguma variavel, utilizamos o simbolo "&" antes de variavel;
 
 //TODO: SINTAXE
-    fscanf(PONTEIRO, "FORMATOS", &VARIAVEIS);
+    &VARIAVEL;
+
+
+//: Reserva um espaço na memoria e retorna o endereço em que que esta reservado
+    int malloc(TAMANHO);
+
+//* NÓS
+
+    typedef struct no
+    {
+        int info;
+        struct no * proximo;
+    }No;
+    
 
 
 =====================================================================================================================================|99|
@@ -737,11 +738,11 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 //: É utilizada em conjunto de Arrays (Pg: x).
 
 //TODO: SINTAXE
-    fgets(VARIAVEL, TAMANHO, stdin);
+    gets(VARIAVEL, TAMANHO, stdin);
 
 //TODO: EXEMPLO
     char Nome[50];
-    fgets(Nome, 50, stdin);
+    gets(Nome, 50, stdin);
 
 
 =====================================================================================================================================|99|
@@ -765,3 +766,176 @@ CAPITULO 0 - FUNÇÕES PRONTAS
 
     system("cls");   // Limpa a tela
     system("pause"); // Pausa o programa ate que alguma tecla seja pressionada, tambem adiciona uma mensagem 
+
+=====================================================================================================================================|99|
+//! BIBLIOTECA STRING.H
+
+    strcpy(DESTINO, FONTE); // Copia o valor de duas strings
+    strlen(STRING); // Retorna o tamanho da string
+    strtok(STRING, "DIVISOR"); // Divide a string a cada divisor esncontrado, (divide-aqui, "-");
+    strcmp(string, string); // Compara as duas strings
+    atoi(string); // Converte a string para int
+
+=====================================================================================================================================|99|
+//! MANIPULAÇÃO DE ARQUIVOS TEXTO
+
+//* CRIAR PONTEIRO DE ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Antes de modificar um arquivo texto precisamos criar um ponteiro de arquivo que apontará para este arquivo.
+
+//TODO: SINTAXE
+    FILE *NOME_PONTEIRO;
+
+//TODO: EXEMPLO
+    FILE *arquivo;
+
+
+//* ABRIR ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Depois precisamos abrir o arquivo para então modifica-lo.
+
+//TODO: SINTAXE
+    PONTEIRO = fopen("NOME_ARQUIVO.txt", "MODO");
+
+//TODO: EXEMPLO
+    arquivo = fopen("aula.txt", "a"); // O ponteiro "arquivo" recebeu o arquivo "aula.txt" para modifica-lo
+
+//? MODOS ------------------------------------------------------------------------------------------------------------------------------|
+ 
+//-----------------+-------------------+---------------------+-------------------------+
+// MODO // ARQUIVO |       FUNÇÃO      | ARQUIVO INEXISTENTE |   ARQUIVO JA EXISTENTE  |
+//-----------------+-------------------+---------------------+-------------------------+
+    R   // TEXTO   | Leitura           | Retorna NULL        | OK                      |
+    W   // TEXTO   | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
+    A   // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    R+  // TEXTO   | Leitura e Escrita | Retorna NULL        | OK                      |
+    W+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
+    A+  // TEXTO   | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    Rb  // BINARIO | Leitura           | Retorna NULL        | OK                      |
+    Wb  // BINARIO | Escrita           | Cria o arquivo      | Reescreve o arquivo     |
+    Ab  // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+        //         |                   |                     |                         |
+    Rb+ // BINARIO | Leitura e Escrita | Retorna NULL        | OK                      |
+    Wb+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Reescreve o arquivo     |
+    Ab+ // BINARIO | Leitura e Escrita | Cria o arquivo      | Continua de onde parou  |
+//-----------------+-------------------+---------------------+-------------------------+
+
+
+//* FECHAR ARQUIVO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: É de extrema importancia que o arquivo sempre seja fechado ao final de sua utilização para evitar corrompimentos.
+
+//TODO: SINTAXE
+    fclose(PONTEIRO);
+
+//TODO: EXEMPLO
+    fclose(arquivo);
+
+
+//* ESCREVER NO ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Existem diversas formas diferentes de se escrever no arquivo texto.
+
+//? FPRINTF -----------------------------------------------------------------------------------------------------------------------------|
+//: Escreve o texto que informamos dentro do arquivo txt.
+
+//TODO: SINTAXE
+    fprintf(PONTEIRO, "TEXTO");
+
+//TODO: EXEMPLO
+    fscanf(arquivo, "Olá mundo"); 
+
+
+//? FGETS ------------------------------------------------------------------------------------------------------------------------------|
+//: Lê uma string até a proxima quebra de linha ou até atingir o (tamanho - 1) informado.
+
+//TODO: SINTAXE
+    fgets(DESTINO, TAMANHO, PONTEIRO);
+
+//TODO: EXEMPLO
+    fgets(str, 100, arquivo); // Lê os primeiros 99 caracteres do ponteiro e joga em "str".
+    
+    
+//? FGETC ------------------------------------------------------------------------------------------------------------------------------|
+//: Lê o primeiro caracteres de uma string ou arquivo informado.
+//: Podemos coloca-lo dentro de um loop while para percorrer todos os caracteres lidos.
+
+//TODO: SINTAXE
+    fgetc(PONTEIRO);
+
+//TODO; EXEMPLO
+    fgetc(arquivo); // Lê caractere a caractere do arquivo.
+                    // Caso a função retorne algum lixo de memoria, lembre de alterar o ultimo caractere lido por "\0".
+
+
+
+    fprintf();
+    fputs("TEXTO", PONTEIRO); // Escreve uma string dentro do arquivo
+    fputc();
+
+
+//* LER O ARQUIVO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Existem diversas formas de se ler o arquivo texto.
+
+//? FSCANF -----------------------------------------------------------------------------------------------------------------------------|
+//: Retorna a primeira ocorrencia da mascara de formatação informada
+
+//TODO: SINTAXE
+    fscanf(PONTEIRO, "%MASCARA", DESTINO);
+
+//TODO: EXEMPLO
+    fscanf(arquivo, "%s %d %c", v1, &v2, &v3); // Retorna a 1° String, o 1° Inteiro e o 1° Char após o inteiro que estejam separados.
+                                               // Joga seus resultados para as respectivas variaveis (v1, v2, v3).
+
+    // NO ARQUIVO: "Hoje é dia 21 de Outubro"
+    // RETORNO: [v1 = "Hoje"] [v2 = 21] [v3 = 'd']
+    
+    
+//? FGETS ------------------------------------------------------------------------------------------------------------------------------|
+//: Lê uma string até a proxima quebra de linha ou até atingir o (tamanho - 1) informado.
+
+//TODO: SINTAXE
+    fgets(DESTINO, TAMANHO, PONTEIRO);
+
+//TODO: EXEMPLO
+    fgets(str, 100, arquivo); // Lê os primeiros 99 caracteres do ponteiro e joga em "str".
+    
+    
+//? FGETC ------------------------------------------------------------------------------------------------------------------------------|
+//: Lê o primeiro caracteres de uma string ou arquivo informado.
+//: Podemos coloca-lo dentro de um loop while para percorrer todos os caracteres lidos.
+
+//TODO: SINTAXE
+    fgetc(PONTEIRO);
+
+//TODO; EXEMPLO
+    fgetc(arquivo); // Lê caractere a caractere do arquivo.
+                    // Caso a função retorne algum lixo de memoria, lembre de alterar o ultimo caractere lido por "\0".
+
+
+//* POSIÇÃO DO PONTEIRO ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Estas funções se referem ao local onde o ponteiro está dentro do arquivo, alternado o local de leitura e escrita dentro do arquivo.
+
+    fseek();  // Altera a posição do ponteiro para uma posição aleatoria.
+    rewind(PONTEIRO); // Altera a posição do ponteiro para o inicio do arquivo.
+    ftell();  // Retorna a posição atual do ponteiro.
+
+
+//* ERROS NO ARQUIVO +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|
+//: Esta função retorna 1 caso tenha ocorrido algum erro na ultima execução do arquivo, caso contrario retorna 0.
+
+//TODO: SINTAXE
+    int ferror(PONTEIRO);
+
+//TODO: EXEMPLO
+    resultado = ferror(arquivo);
+
+
+
+
+
+
+    fprintf(PONTEIRO, "TEXTO"); // Escreve dentro do arquivo do ponteiro.
+
+    while(!feof(PONTEIRO)) // Percorre todas as linhas do arquivo.
+    {
+        fgets(DESTINO, NUM_CARACTERES, PONTEIRO); // Retorna para a variavel destino o num de caracteres da linha atual do ponteiro.
+    }
